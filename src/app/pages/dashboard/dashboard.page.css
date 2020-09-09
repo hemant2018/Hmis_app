@@ -1,0 +1,46 @@
+/* .my-custom-menu {
+    --width: 500px;
+  } */
+
+  body.platform-android, body.platform-override{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
+a{color: #2A2AC0;}    
+.mt1{padding-top: 6px;}
+.bar.bar-assertive, .platform-android .bar-header.bar-assertive.bar, .platform-override .bar-header.bar-assertive.bar{background-color: #fff; color: #181461;}
+.bar.bar-assertive .title{color: #181461; }
+.bar .title{height: 60px;}
+.platform-android.use-material-icons .ion-navicon:before, .platform-override.use-material-icons .ion-navicon:before{color: #181461; }
+.platform-android .bar, .platform-override .bar{height: 80px; line-height: 80px;}
+.platform-android .bar .button.icon.button-icon:before, .platform-android .bar .button.icon.icon:before, .platform-android .bar .button.icon:before, .platform-android .bar .button.icon.icon-left:before, .platform-android .bar .button.icon.icon-right:before, .platform-android .bar .button.button-icon.button-icon:before, .platform-android .bar .button.button-icon.icon:before, .platform-android .bar .button.button-icon:before, .platform-android .bar .button.button-icon.icon-left:before, .platform-android .bar .button.button-icon.icon-right:before, .platform-android .bar .button.back-button.button-icon:before, .platform-android .bar .button.back-button.icon:before, .platform-android .bar .button.back-button:before, .platform-android .bar .button.back-button.icon-left:before, .platform-android .bar .button.back-button.icon-right:before, .platform-android .bar .back-button.icon.button-icon:before, .platform-android .bar .back-button.icon.icon:before, .platform-android .bar .back-button.icon:before, .platform-android .bar .back-button.icon.icon-left:before, .platform-android .bar .back-button.icon.icon-right:before, .platform-android .bar .back-button.button-icon.button-icon:before, .platform-android .bar .back-button.button-icon.icon:before, .platform-android .bar .back-button.button-icon:before, .platform-android .bar .back-button.button-icon.icon-left:before, .platform-android .bar .back-button.button-icon.icon-right:before, .platform-android .bar .back-button.back-button.button-icon:before, .platform-android .bar .back-button.back-button.icon:before, .platform-android .bar .back-button.back-button:before, .platform-android .bar .back-button.back-button.icon-left:before, .platform-android .bar .back-button.back-button.icon-right:before, .platform-override .bar .button.icon.button-icon:before, .platform-override .bar .button.icon.icon:before, .platform-override .bar .button.icon:before, .platform-override .bar .button.icon.icon-left:before, .platform-override .bar .button.icon.icon-right:before, .platform-override .bar .button.button-icon.button-icon:before, .platform-override .bar .button.button-icon.icon:before, .platform-override .bar .button.button-icon:before, .platform-override .bar .button.button-icon.icon-left:before, .platform-override .bar .button.button-icon.icon-right:before, .platform-override .bar .button.back-button.button-icon:before, .platform-override .bar .button.back-button.icon:before, .platform-override .bar .button.back-button:before, .platform-override .bar .button.back-button.icon-left:before, .platform-override .bar .button.back-button.icon-right:before, .platform-override .bar .back-button.icon.button-icon:before, .platform-override .bar .back-button.icon.icon:before, .platform-override .bar .back-button.icon:before, .platform-override .bar .back-button.icon.icon-left:before, .platform-override .bar .back-button.icon.icon-right:before, .platform-override .bar .back-button.button-icon.button-icon:before, .platform-override .bar .back-button.button-icon.icon:before, .platform-override .bar .back-button.button-icon:before, .platform-override .bar .back-button.button-icon.icon-left:before, .platform-override .bar .back-button.button-icon.icon-right:before, .platform-override .bar .back-button.back-button.button-icon:before, .platform-override .bar .back-button.back-button.icon:before, .platform-override .bar .back-button.back-button:before, .platform-override .bar .back-button.back-button.icon-left:before, .platform-override .bar .back-button.back-button.icon-right:before{padding-top: 13px;}
+.platform-android .bar-header .title, .platform-override .bar-header .title{line-height: 80px;}
+.mdl-button, .platform-android .button, .platform-override .button, .platform-android .button.activated, .platform-android .button.active, .platform-override .button.activated, .platform-override .button.active{height: 60px;} 
+.button-clear, .platform-android .bar .button, .platform-android .bar .back-button, .platform-override .bar .button, .platform-override .bar .back-button, .platform-android .popup-buttons button.button-positive, .platform-android .popup-buttons button.button-calm, .platform-android .popup-buttons button.button-assertive, .platform-android .popup-buttons button.button-balanced, .platform-android .popup-buttons button.button-energized, .platform-android .popup-buttons button.button-royal, .platform-android .popup-buttons button.button-dark, .platform-android .popup-buttons button.button-default, .platform-override .popup-buttons button.button-positive, .platform-override .popup-buttons button.button-calm, .platform-override .popup-buttons button.button-assertive, .platform-override .popup-buttons button.button-balanced, .platform-override .popup-buttons button.button-energized, .platform-override .popup-buttons button.button-royal, .platform-override .popup-buttons button.button-dark, .platform-override .popup-buttons button.button-default, .platform-android .list:not(.card) .item .button, .platform-override .list:not(.card) .item .button{max-height: 60px;float:right}
+.platform-android .bar .title + .button:last-child, .platform-android .bar > .button + .button:last-child, .platform-android .bar > .button.pull-right, .platform-android .bar .buttons.pull-right, .platform-override .bar .title + .button:last-child, .platform-override .bar > .button + .button:last-child, .platform-override .bar > .button.pull-right, .platform-override .bar .buttons.pull-right{top: 15px;}
+   
+.platform-android .has-header, .platform-android .has-subheader, .platform-override .has-header, .platform-override .has-subheader{margin-top: 80px; display:block;}
+.platform-android .bar-header, .platform-override .bar-header{-webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);}
+.content{padding:8% 5%;}
+.searchbox{border-radius: 6px; background-color: #fff;-webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); border:0px; padding:12px; width: 100%; font-size: 1em;
+ } 
+ .input_container {
+    position:relative;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.input_img {
+    position:absolute;
+    bottom:10px;
+    right:15px;
+    width:16px;
+    height:16px;
+}
+
+.dashboardbx{display: inline-block;border-radius: 6px; background-color: #fff;-webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1); min-height: 280px; width: 46.9%; margin-bottom: 5%; padding:5%; vertical-align:top;}
+.dashboardbx:nth-child(even){margin-right: 5%;}
+.dashboardbx h2{font-size: 16px; color: #181461; font-weight: 500; margin:0; padding:0; line-height: 20px; margin-bottom:30%;}
+.dashboardbx img{width:100%; height: auto;}

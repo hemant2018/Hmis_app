@@ -1,0 +1,11 @@
+.content-Bg{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
+a{color: #2A2AC0;}
+.intro{ padding:0 5%; display: block; height: 100vh; }
+.logocnr{text-align: center; padding-top:9em;}
+.logocnrr{width: 85px; height: 85px; background-color: #6C63FF; border-radius: 85px;padding:16px; display: inline-block;}
+.logocnrr img{width: 100%; height: auto;}
+.logocnr p{margin-top: 0; margin-bottom: 2.5em;}
+.intro h1{color:#333; font-size: 1.8em; text-align: center; margin:0px;font-weight: 500;}
+.intro h2{color:#181461; font-size: 1.8em; text-align: center; font-weight: 500; line-height: 1.1; margin-bottom:0;margin-top: 2em;}
+
+.continuebtn{border-radius: 4px; color: #fff; margin-top: 1em;  background-color:#2A2AC0; line-height: 44px; text-align: center; width: 90%;font-size: 1em;margin:auto;}
