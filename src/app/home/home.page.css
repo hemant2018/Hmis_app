@@ -1,0 +1,21 @@
+.slideBg{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
+.intro{background-image: url(../../assets/white-arc-left.svg); background-repeat: no-repeat; background-position: left 80%; display: block; height: 100vh; }
+.logocnr{text-align: center; padding-top:3em;}
+.logocnrr{width: 85px; height: 85px; background-color: #6C63FF; border-radius: 85px;padding:16px; display: inline-block;}
+.logocnrr img{width: 100%; height: auto;}
+.intro h1{color:#333; font-size: 1.8em; text-align: center; margin:0px;font-weight: 500;}
+.intro h2{color:#181461; font-size: 1.8em; text-align: center; font-weight: 500;}
+.bottom-nav{position: fixed; bottom: 2.5em; width: 100%;}
+
+.navlft{display: inline-block; width: 23%; margin-left: 1%; text-align: center; font-size: 14px; color:#2A2AC0;}
+.navmdl{display: inline-block; width: 50%;text-align: center;}
+.navrgt{display: inline-block; width: 23%;margin-left: 1%;text-align: center;font-size: 14px; color:#2A2AC0;}
+
+.round-nav{width: 10px; height: 10px; border-radius:10px; background-color: rgba(42,42,192, 0.2); display: inline-block; margin: 0 1%;}
+.round-nav.active{background-color: rgba(42,42,192, 1.0);}
+
+
+/* hemant css start */
+.slide-content{
+    display: block;
+}
