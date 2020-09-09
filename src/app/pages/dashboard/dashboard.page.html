@@ -21,13 +21,27 @@
 </ion-menu>
 
 <!-- <ion-router-outlet id="main"></ion-router-outlet> -->
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <button class="button icon ion-navicon" (click)="openSidenavBar()"></button>
     <ion-title class="title">Dashboard</ion-title>
     <button class="button button-clear"><img src="../../assets/alert-ico.svg"></button>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
+<ion-header> 
+  <ion-toolbar color="" class="bgwhite header"> 
+    <ion-buttons slot="start" (click)="openSidenavBar()">
+      <img src="../../assets/images/nav-ico.svg">
+      </ion-buttons>
+  <ion-title align="center">
+  Dashboard
+  </ion-title> 
+  <ion-buttons slot="end">
+    <img src="../../assets/images/alert-ico.svg">
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header> 
 
 <ion-content overflow-scroll="true" class="has-header padding" id="main">
        

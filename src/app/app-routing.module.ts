@@ -25,6 +25,10 @@ const routes: Routes = [
     // pathMatch: 'full'
     component:TriageComponent
   },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./pages/sign-in.module').then( m => m.SignInPageModule)
+  },
 ];
 
 @NgModule({
