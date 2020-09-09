@@ -1,4 +1,5 @@
 <ion-content overflow-scroll="true" class="padding intro">
+  <div class="maincont">
   <div class="logocnr">
    <div class="logocnrr">
            <img src="../../assets/logo.svg.svg">     
@@ -8,16 +9,18 @@
        <p>Please enter your location</p>
    </div>
 
- <!-- <input type="text" placeholder="Your Location"> -->
- <ion-item class="bg-transparent">
-  <ion-label position="floating">Your Location</ion-label>
-  <ion-input></ion-input>
-</ion-item> 
+   <ion-item class="bg-transparent ion-no-padding mobinpt" lines="none">
+    <span item-right><ion-icon name="location-outline"></ion-icon></span>
+    <ion-input placeholder="Your Location"></ion-input>
+  </ion-item> 
 
 
+  
 
- <div class="continuebtn" (click)="navigate()">Continue</div>
+  <ion-button expand="block" color="tertiary" class="next-btn" (click)="navigate()">Continue</ion-button>
+
+ <!-- <div class="continuebtn" (click)="navigate()">Continue</div> -->
 
    
-
+</div>
 </ion-content>

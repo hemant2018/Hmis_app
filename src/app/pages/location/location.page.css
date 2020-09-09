@@ -9,3 +9,29 @@ a{color: #2A2AC0;}
 .intro h2{color:#181461; font-size: 1.8em; text-align: center; font-weight: 500; line-height: 1.1; margin-bottom:0;margin-top: 2em;}
 
 .continuebtn{border-radius: 4px; color: #fff; margin-top: 1em;  background-color:#2A2AC0; line-height: 44px; text-align: center; width: 90%;font-size: 1em;margin:auto;margin-top: 28px;}
+
+.maincont{background-color:#fff; padding:10px 25px;}
+
+.mobinpt{border-radius: 6px; background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    border:0px; padding:0px 10px; width: 100%; font-size: 1em;}
+
+.next-btn{margin:20px 0;}
+
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px; 
+  }
+
+  .item-inner {
+    flex-direction: row-reverse !important;
+  }
+  ion-icon {
+    color: #666 !important;
+    margin: 1px 2px 1px 0px !important;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 4px 2px 1px 0px;
+  }

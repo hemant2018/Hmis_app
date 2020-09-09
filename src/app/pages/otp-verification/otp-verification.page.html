@@ -1,4 +1,5 @@
 <ion-content overflow-scroll="true" class="padding intro">
+  <div class="maincont">
   <div class="logocnr">
    <div class="logocnrr">
            <img src="../../assets/logo.svg.svg">     
@@ -8,17 +9,19 @@
        <p>Insert your code here:</p>
    </div>
 
+   <ion-item class="bg-transparent ion-no-padding mobinpt" lines="none">
+    <ion-input placeholder="OTP"></ion-input>
+  </ion-item> 
+
  
- <ion-item class="bg-transparent">
-  <ion-label position="floating">OTP</ion-label>
-  <ion-input></ion-input>
-</ion-item> 
 
+  <ion-button expand="block" color="tertiary" class="next-btn" (click)="navigate()">Continue</ion-button>
 
-
- <div class="continuebtn" (click)="navigate()">Continue</div>
+ <!-- <div class="continuebtn" (click)="navigate()">Continue</div> -->
 <div class="navlft">Resend code</div>
 <div class="navrgt" (click)="changeMobileNo()">Change Number</div>
-  
 
+
+  
+</div>
 </ion-content>

@@ -42,5 +42,31 @@ box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); border:0px; padding:12px; width: 10
 -moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
 box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1); min-height: 280px; width: 46.9%; margin-bottom: 5%; padding:5%; vertical-align:top;}
 .dashboardbx:nth-child(even){margin-right: 5%;}
-.dashboardbx h2{font-size: 16px; color: #181461; font-weight: 500; margin:0; padding:0; line-height: 20px; margin-bottom:30%;}
+.dashboardbx h2{font-size: 16px; color: #181461; font-weight: 600; margin:0; padding:0; line-height: 20px; margin-bottom:30%;}
 .dashboardbx img{width:100%; height: auto;}
+
+.maincont{background-color:#fff; padding:10px 25px;}
+
+.mobinpt{border-radius: 6px; background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    border:0px; padding:0px 10px; width: 100%; font-size: 1em; margin:20px 0}
+
+.next-btn{margin:20px 0;}
+
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px; 
+  }
+
+  .item-inner {
+    flex-direction:row !important;
+  }
+  ion-icon {
+    color: #999 !important;
+    margin: 1px 2px 1px 0px !important;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 4px 2px 1px 0px;
+  }
