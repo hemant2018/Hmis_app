@@ -1,22 +1,45 @@
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title>
-      <span style="float: right;" (click)="closeSidenavBar()">X</span>
+    <ion-toolbar color="primary"  class="ion-padding">
+
+      <ion-row>
+        <ion-col size="5">
+         <ion-item class="bg-transparent ion-no-padding" lines="none">
+          <ion-thumbnail slot="start">
+            <ion-img> </ion-img>
+          </ion-thumbnail>
+           </ion-item>
+        </ion-col>
+        <ion-col size="7">
+          Subrat Roy<br>
+          Bhubaneswar
+        </ion-col>
+        
+      </ion-row>
+
+
+
+
+      
+      <span class="navx" (click)="closeSidenavBar()">X</span>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
-      <ion-item>My Profile</ion-item>
-      <ion-item>My Triage</ion-item>
-      <ion-item>My Appointments</ion-item>
-      <ion-item>New Appointments</ion-item>
-      <ion-item>Medical Records</ion-item>
-      <ion-item>Forum</ion-item>
-      <ion-item>Statistics</ion-item>
-      <ion-item>Account Settings</ion-item>
-      <ion-item>Help</ion-item>
+    <ion-list class="leftnavcnr">
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-forum-ico.svg"> Forum</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-stat-ico.svg"> Statistics</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-acc-ico.svg"> Account Settings</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-help-ico.svg"> Help</ion-item>
+
+      
     </ion-list>
+
+    <ion-item class="leftlogout" lines="none"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
   </ion-content>
 </ion-menu>
 

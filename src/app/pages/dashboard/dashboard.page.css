@@ -70,3 +70,19 @@ ion-item {
     font-size: 22px;
     padding: 4px 2px 1px 0px;
   }
+
+  .navx{position: absolute; right: 5px; top: 10px;}
+  .item-inner {
+    flex-direction: row-reverse !important;
+  }
+  ion-icon {
+    color: #666 !important;
+    margin: 1px 2px 1px 0px !important;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 2px 2px 1px 0px;
+  }
+
+  .leftnavcnr{padding-top: 20px;}
+  .leftnavcnr img{ margin-right: 10px;}
+  .leftlogout{position: absolute; bottom: 50px;}
