@@ -1,3 +1,323 @@
-<p>
-  profile works!
-</p>
+<ion-header> 
+  <ion-toolbar color="" class="bgwhite header"> 
+    <ion-buttons slot="start">
+      <img src="../../assets/images/nav-ico.svg">
+      </ion-buttons>
+  <ion-title align="center">
+  My Profile
+  </ion-title> 
+  <ion-buttons slot="end">
+    <img src="../../assets/images/alert-ico.svg">
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header> 
+  <ion-content color="light">
+
+    <div class="maincont">
+   
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">UHID</ion-label>
+        <ion-button color="primary" class="uhidbtn">Create Temp UHID</ion-button>
+        <ion-input></ion-input>
+      </ion-item>  
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">MM/DD/YYYY</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+      </ion-item>
+
+      <!-- <ion-row radio-group>
+        <ion-col>
+          <ion-item class="no-bottom-border bg-transparent">
+            Gender:
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>Male</ion-label>
+            <ion-radio value="male"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+           <ion-label>Female</ion-label>
+            <ion-radio value="female"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+           <ion-label>Others</ion-label>
+            <ion-radio value="others"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row> -->
+
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              Gender:
+            </ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Male</ion-label>
+            <ion-radio value="male"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Female</ion-label>
+            <ion-radio value="female"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Others</ion-label>
+            <ion-radio value="others"></ion-radio>
+          </ion-item>
+       
+        </ion-radio-group>
+      </ion-list>
+   
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Mobile Number</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item> 
+      
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Secondary Number</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Email Address</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Address with locality</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-list>
+
+        <ion-item>
+          <ion-label>Country</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="india">India</ion-select-option>
+            <ion-select-option value="usa">USA</ion-select-option>
+             
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>State</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="india">India</ion-select-option>
+            <ion-select-option value="usa">USA</ion-select-option>
+             
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>District</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="india">India</ion-select-option>
+            <ion-select-option value="usa">USA</ion-select-option>
+             
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Pin Code</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="india">India</ion-select-option>
+            <ion-select-option value="usa">USA</ion-select-option>
+             
+          </ion-select>
+        </ion-item>
+
+      </ion-list>
+      
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Father's Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Mother's Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-item class="tpspc">
+        <ion-label>Marital Status:</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Spouse Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Spouse UHID</ion-label>
+        <ion-button color="primary" class="uhidbtn">Validate</ion-button>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Next of Kin Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+<ion-item>
+        <ion-label>Choose Relationship</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Kin Address</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-label>Same as above</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Medico legal:</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Referral:</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Hospital Name</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-item>
+        <ion-label>Hospital registry ID</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Treatment</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Paying:</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Patient Type</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Beneficiary Type 1</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+      <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Beneficiary Type 2</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+        </ion-item>
+      <ion-item>
+        <ion-label>Beneficiary Type 3</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+        </ion-item>
+
+       
+
+
+      <ion-item>
+        <ion-label>Government ID:</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Govt Id Type 1</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+        </ion-item>
+      <ion-item>
+        <ion-label>Govt Id Type 2</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+        </ion-item>
+      <ion-item>
+        <ion-label>Govt Id Type 3</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button>
+        </ion-item>
+
+        <ion-item>
+      <ion-button size="small" color="medium" class="nobrdrrads">Upload Photo</ion-button>
+    </ion-item>
+
+
+    
+
+    </div> 
+</ion-content> 

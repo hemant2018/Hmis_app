@@ -24,3 +24,100 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../src/assets/fonts/Lato-Regular.eot');
+    src: url('../src/assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Regular.svg#Lato-Regular') format('svg'),
+         url('../src/assets/fonts/Lato-Regular.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Regular.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Semibold';
+    src: url('../src/assets/fonts/Lato-Semibold.eot');
+    src: url('../src/assets/fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Semibold.svg#Lato-Semibold') format('svg'),
+         url('../src/assets/fonts/Lato-Semibold.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Semibold.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Semibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Medium';
+    src: url('../src/assets/fonts/Lato-Medium.eot');
+    src: url('../src/assets/fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Medium.svg#Lato-Medium') format('svg'),
+         url('../src/assets/fonts/Lato-Medium.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Medium.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Light';
+    src: url('../src/assets/fonts/Lato-Light.eot');
+    src: url('../src/assets/fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Light.svg#Lato-Light') format('svg'),
+         url('../src/assets/fonts/Lato-Light.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Light.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Heavy';
+    src: url('../src/assets/fonts/Lato-Heavy.eot');
+    src: url('../src/assets/fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Heavy.svg#Lato-Heavy') format('svg'),
+         url('../src/assets/fonts/Lato-Heavy.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Heavy.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Bold';
+    src: url('../src/assets/fonts/Lato-Bold.eot');
+    src: url('../src/assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Bold.svg#Lato-Bold') format('svg'),
+         url('../src/assets/fonts/Lato-Bold.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Bold.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Black';
+    src: url('../src/assets/fonts/Lato-Black.eot');
+    src: url('../src/assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+         url('../src/assets/fonts/Lato-Black.svg#Lato-Black') format('svg'),
+         url('../src/assets/fonts/Lato-Black.ttf') format('truetype'),
+         url('../src/assets/fonts/Lato-Black.woff') format('woff'),
+         url('../src/assets/fonts/Lato-Black.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  :root {
+    --ion-font-family: 'Lato-Regular';
+  }
+        
+  
+.maincont{background-color:#fff; padding:10px 20px;}
+.bgwhite{--background: #fff;}
+.header{--border-width:0px!important; padding:10px!important; -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.1);}
+.bg-transparent{--background:rgba(255,255,255,0.0);}
+.no-bottom-border{--border-width:0px!important;}
