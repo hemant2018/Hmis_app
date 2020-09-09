@@ -1,5 +1,15 @@
 .uhidbtn{position: absolute; right: 0px; bottom: 5px; --border-radius: 0px;}
 ion-label{font-size: 1em;}
-ion-item .item-native{--padding-start:0px}
+
 .nobrdrrads{--border-radius:0px; color: #fff;}
 .tpspc{margin-top: 30px;}
+
+.item-nativepd{--padding-start:0px!important;}
+
+.maincont{background-color:#fff; padding:10px 25px 10px 5px;}
+
+ .item-inner{border: 0px!important;}
+
+ .divider{background-color: #F1F1F1; height: 3px; margin:20px -25px 10px -10px;}
+
+ .next-btn{margin:10px 25px 20px 25px; border-radius: 6px;}
