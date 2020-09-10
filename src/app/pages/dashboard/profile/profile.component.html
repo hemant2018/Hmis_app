@@ -76,22 +76,9 @@
         <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"  [(ngModel)]="dob"></ion-datetime>
       </ion-item>
 
-      <!-- <ion-list>
-        <ion-radio-group  [(ngModel)]="gender">
-          <ion-list-header>
-            <ion-label class="bold">Gender</ion-label>
-          </ion-list-header>
-          
-          <ion-item *ngFor="let item of genderList">
-          <ion-label>{{item}}</ion-label>
-          <ion-radio [value]="item"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
-      </ion-list> -->
-
       <ion-item class="ion-no-padding tpspcs">   
         <ion-label>Gender</ion-label>
-            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="gender">
               <ion-select-option value="male">Male</ion-select-option>
               <ion-select-option value="female">Female</ion-select-option>
               <ion-select-option value="other">Other</ion-select-option>
