@@ -1,3 +1,938 @@
-<p>
-  triage works!
-</p>
+<ion-header> 
+  <ion-toolbar color="" class="bgwhite header"> 
+    <ion-buttons slot="start">
+      <img src="../../assets/images/nav-ico.svg">
+      </ion-buttons>
+  <ion-title align="center">
+  My Triage
+  </ion-title> 
+  <ion-buttons slot="end">
+    <img src="../../assets/images/alert-ico.svg">
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header> 
+  <ion-content color="light">
+
+    <div class="maincont">
+
+      <ion-row  class="tpspc">
+        
+        <ion-col size="4"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">1</span>Height:</ion-item></ion-col>
+         
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx"></ion-input>
+            <ion-label>cm</ion-label>
+          </ion-item> 
+        </ion-col>
+
+        <ion-col size="1"  class="ion-no-padding"><div class="ordv">OR</div></ion-col>
+        <ion-col size="4" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx"></ion-input>
+            <ion-label>feet</ion-label>
+          </ion-item> 
+        </ion-col>
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="50" max="250" color="primary" pin="true" step="1">
+          <ion-label slot="start">50</ion-label>
+          <ion-label slot="end">250</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+
+
+      <ion-row>
+        
+        <ion-col size="4"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">2</span>Weight:</ion-item></ion-col>
+         
+        <ion-col size="3">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>kg</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="10" max="150" color="primary" pin="true" step="1">
+          <ion-label slot="start">10</ion-label>
+          <ion-label slot="end">150</ion-label>
+        </ion-range>
+      </ion-item>
+     
+
+
+      <ion-row>
+        
+        <ion-col size="2"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">3</span></ion-item></ion-col>
+         
+        <ion-col size="5" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label>BMI</ion-label>
+            <ion-input class="midbx"></ion-input>
+            <ion-label>kg/m2</ion-label>
+          </ion-item> 
+</ion-col>
+       
+        <ion-col size="5" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label>BSA </ion-label>
+            <ion-input class="midbx"></ion-input>
+            <ion-label>m2</ion-label>
+          </ion-item> 
+        </ion-col>
+        
+      </ion-row>
+
+      
+
+      <ion-row class="tpspc">
+        
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">4</span>Temperature:</ion-item></ion-col>
+         
+        <ion-col size="2">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+             
+          </ion-item> 
+</ion-col>
+        <ion-col size="1"><ion-item lines="none" class="ion-no-padding ion-text-center"><div class="ion-text-center">.</div></ion-item></ion-col>
+        <ion-col size="3">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx"></ion-input>
+            <ion-label>F</ion-label>
+          </ion-item> 
+        </ion-col>
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="95" max="108" color="primary" pin="true" step="1">
+          <ion-label slot="start">95</ion-label>
+          <ion-label slot="end">108</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+
+      <ion-row>
+        
+        <ion-col size="7"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">5</span>Respiratory Rate:</ion-item></ion-col>
+         
+        <ion-col size="5">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>bpm</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="0" max="200" color="primary" pin="true" step="1">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">200</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+      <ion-row>
+        
+        <ion-col size="7"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">6</span>Pulse Rate:</ion-item></ion-col>
+         
+        <ion-col size="5">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx"></ion-input>
+            <ion-label>bpm</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="0" max="100" color="primary" pin="true" step="1">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">100</ion-label>
+        </ion-range>
+      </ion-item>
+
+      <ion-row>
+        
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">7</span>Pulse Oxymetry:</ion-item></ion-col>
+         
+        <ion-col size="2">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+             
+          </ion-item> 
+</ion-col>
+        <ion-col size="1"><ion-item lines="none" class="ion-no-padding ion-text-center"><div class="ion-text-center">.</div></ion-item></ion-col>
+        <ion-col size="3">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>%</ion-label>
+          </ion-item> 
+        </ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="80" max="100" color="primary" pin="true" step="1">
+          <ion-label slot="start">80</ion-label>
+          <ion-label slot="end">100</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+      <ion-row>
+        
+        <ion-col size="5"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">8</span>Blood Pressure:</ion-item></ion-col>
+         
+        <ion-col size="2">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx"></ion-input>
+          </ion-item> 
+        </ion-col>
+
+        <ion-col size="1"><ion-item lines="none" class="ion-no-padding ion-text-center"><div class="ion-text-center">/</div></ion-item></ion-col>
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>mmHg</ion-label>
+          </ion-item> 
+        </ion-col>
+        
+        
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" class="pos">
+      <ion-item lines="none">
+      <ion-range min="40" max="300" color="primary" pin="true" step="1"></ion-range>
+      </ion-item>
+      <div class="bpnm">Diastolic</div>
+    </ion-col>
+     
+    <ion-col size="12" class="pos">
+      <ion-item lines="none">
+        <ion-range min="40" max="300" color="primary" pin="true" step="1">
+          <ion-label slot="start">40</ion-label>
+          <ion-label slot="end">300</ion-label>
+        </ion-range>
+      </ion-item>
+      <div class="bpnm">Systolic</div>
+    </ion-col>
+      </ion-row>
+
+      <ion-row>
+        
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">9</span>Pain:</ion-item></ion-col>
+         
+        <ion-col size="6">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>Scale</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">10</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+      <ion-row>
+        
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">10</span>Stress:</ion-item></ion-col>
+         
+        <ion-col size="6">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>Scale</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">10</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+      <ion-row>
+        
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">11</span>Exercise:</ion-item></ion-col>
+         
+        <ion-col size="6">
+          <ion-item lines="none" class="ion-no-padding">
+            
+            <ion-input class="midbx"></ion-input>
+            <ion-label>Scale</ion-label>
+          </ion-item> 
+</ion-col>
+        
+        
+      </ion-row>
+
+      <ion-item lines="none">
+        
+        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">10</ion-label>
+        </ion-range>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">12</span>Blood Group:</ion-item></ion-col>
+         
+        <ion-col size="6">
+        <ion-item class="tpspc" class="ion-no-padding">   
+        <ion-label>Select</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="ab+">AB+</ion-select-option>
+              <ion-select-option value="a+">A+</ion-select-option>
+              <ion-select-option value="b+">B+</ion-select-option>
+              <ion-select-option value="o+">O+</ion-select-option>
+              <ion-select-option value="ab-">AB-</ion-select-option>
+              <ion-select-option value="a-">A-</ion-select-option>
+              <ion-select-option value="b-">B-</ion-select-option>
+              <ion-select-option value="o-">O-</ion-select-option>
+               
+            </ion-select>
+          </ion-item> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="tpspc">
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">13</span>Rhesus Factor*:</ion-item></ion-col>
+         
+        <ion-col size="6">
+        <ion-item class="ion-no-padding">   
+        <ion-label>Select</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="Positive">Positive</ion-select-option>
+              <ion-select-option value="Negetive">Negetive</ion-select-option>
+               
+            </ion-select>
+          </ion-item> 
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row class="tpspc">
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">14</span>PITCT*:</ion-item></ion-col>
+         
+        <ion-col size="6">
+        <ion-item class="ion-no-padding">   
+        <ion-label>Select</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="Positive">Positive</ion-select-option>
+              <ion-select-option value="Negetive">Negetive</ion-select-option>
+               
+               
+            </ion-select>
+          </ion-item> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="tpspc">
+        <ion-col size="6"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">15</span>Last menstrual period:</ion-item></ion-col>
+         
+        <ion-col size="6">
+          <ion-item class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row class="tpspc">
+        <ion-col size="8"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">16</span>Smoker:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item lines="none"  class="ion-no-padding">Daily Average cigarette / bidis</ion-item> 
+         
+        
+          <ion-item class="ion-no-padding">   
+            <ion-label>Select No of cigarette*</ion-label>
+                <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                  <ion-select-option value="Positive">5</ion-select-option>
+                  <ion-select-option value="Negetive">10</ion-select-option>
+                   
+                   
+                </ion-select>
+              </ion-item> 
+        
+
+
+      <ion-row class="tpspc">
+        <ion-col size="8"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">17</span>Alcohol:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item lines="none"  class="ion-no-padding">Select Daily Average Ml*</ion-item> 
+         
+        
+          <ion-item class="ion-no-padding">   
+            <ion-label>Daily Average ml</ion-label>
+                <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                  <ion-select-option value="Positive">50</ion-select-option>
+                  <ion-select-option value="Negetive">100</ion-select-option>
+                  <ion-select-option value="Negetive">500</ion-select-option>
+                   
+                </ion-select>
+              </ion-item> 
+        
+      <ion-row class="tpspc">
+        <ion-col size="8"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">18</span>Recreational drugs:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="tpspc">
+        <ion-col size="8"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">19</span>HIV Status:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="tpspc">
+        <ion-col size="8"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">20</span>Do you have regular source of income?</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Pre-existing Illness or conditions:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+      <ion-col size="12" class="ion-no-padding">
+      <ion-chip>
+        <ion-label>Fever</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+</ion-col>
+</ion-row>
+
+<ion-row>
+<ion-col size="3" class="ion-no-padding small-text">
+  Persistent since:
+</ion-col>
+<ion-col size="3" class="ion-no-padding">
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-input class="midbx" placeholder="Years"></ion-input>
+    
+  </ion-item>
+</ion-col>
+<ion-col size="3" class="ion-no-padding">
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-input class="midbx" placeholder="Months"></ion-input>
+  </ion-item>
+</ion-col>
+<ion-col size="3" class="ion-no-padding">
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-input class="midbx" placeholder="Days"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="3" class="ion-no-padding small-text padtp10">
+    Upload documents
+  </ion-col>
+  <ion-col size="9" class="ion-no-padding padtp10">
+    <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="3" class="ion-no-padding small-text padtp10">
+      Medication
+    </ion-col>
+    <ion-col size="9" class="ion-no-padding">
+      <ion-chip>
+        <ion-label>Fever</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Fever</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Fever</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+    </ion-col>
+    </ion-row>
+
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-input class="midbx" placeholder="Add Medication"></ion-input>
+    </ion-item>
+
+    <ion-row  class="padtp10">
+      <ion-col size="12" class="ion-no-padding extrainfo">
+      Here note/extra info will display
+</ion-col>
+</ion-row>
+
+      <ion-item class="ion-no-padding">
+        <ion-label>Search & Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="ion-no-padding">
+        <ion-label>Enter any other info</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Chronic Illness or conditions:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+      <ion-item class="ion-no-padding">
+        <ion-label>Search & Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="ion-no-padding">
+        <ion-label>Enter any other info</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Operations or surgeries:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+        <ion-chip>
+          <ion-label>Fever</ion-label>
+          <ion-icon name="close"></ion-icon>
+        </ion-chip>
+  </ion-col>
+  </ion-row>
+  
+  <ion-row>
+  <ion-col size="3" class="ion-no-padding small-text">
+    Operation date:
+  </ion-col>
+  <ion-col size="9" class="ion-no-padding">
+    <ion-item class="ion-no-padding">
+      <ion-label> </ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+  </ion-col>
+  
+  </ion-row>
+  
+  <ion-row>
+    <ion-col size="3" class="ion-no-padding small-text padtp10">
+      Upload documents
+    </ion-col>
+    <ion-col size="9" class="ion-no-padding padtp10">
+      <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+    </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3" class="ion-no-padding small-text padtp10">
+        Medication
+      </ion-col>
+      <ion-col size="9" class="ion-no-padding">
+        <ion-chip>
+          <ion-label>Fever</ion-label>
+          <ion-icon name="close"></ion-icon>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Fever</ion-label>
+          <ion-icon name="close"></ion-icon>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Fever</ion-label>
+          <ion-icon name="close"></ion-icon>
+        </ion-chip>
+      </ion-col>
+      </ion-row>
+  
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-input class="midbx" placeholder="Add Medication"></ion-input>
+      </ion-item>
+  
+      <ion-row  class="padtp10">
+        <ion-col size="12" class="ion-no-padding extrainfo">
+        Here note/extra info will display
+  </ion-col>
+  </ion-row>
+
+
+
+      <ion-item class="ion-no-padding">
+        <ion-label>Search & Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+      <ion-item class="ion-no-padding">
+        <ion-label>Enter any other info</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item lines="none"  class="ion-no-padding tpspc">Vaccinations:</ion-item>
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">BCG</ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">3 polio doses
+        </ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">3 DPT
+        </ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Measles</ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Pneumococcal</ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group >
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Yellow Fever</ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Titanus</ion-item></ion-col>
+        <ion-col size="8" class="ion-no-padding"><ion-list>
+          <ion-radio-group>
+            <ion-item lines="none">
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="yes"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="no"></ion-radio>
+            </ion-item>
+        
+            <ion-item lines="none">
+              <ion-label>Maybe</ion-label>
+              <ion-radio slot="start" value="maybe"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list></ion-col>       
+      </ion-row>
+
+      <ion-item class="ion-no-padding">
+        <ion-label>Enter any other vaccination</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <ion-row>
+        <ion-col size="3" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">BCG</ion-item></ion-col>
+        <ion-col size="3" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><ion-label>Yes</ion-label>
+          <ion-radio value="yes"></ion-radio></ion-item></ion-col>
+        <ion-col size="3" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><ion-label>No</ion-label>
+          <ion-radio value="no"></ion-radio></ion-item></ion-col>
+        <ion-col size="3" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><ion-label>Maybe</ion-label>
+          <ion-radio slot="end" value="maybe"></ion-radio></ion-item></ion-col>       
+      </ion-row> -->
+
+
+
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Current medication:</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+      <ion-item class="ion-no-padding">
+        <ion-label>Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Are you sensitive to any medication?</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+      <ion-item class="ion-no-padding">
+        <ion-label>Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Are you sensitive to any food?</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+      <ion-item class="ion-no-padding">
+        <ion-label>Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+      <ion-row class="tpspc">
+        <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Do you have any medical implants or invasive contraceptive?</ion-item></ion-col>
+         
+        <ion-col size="4">
+          <ion-item lines="none">
+            <ion-label> </ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+         
+        </ion-col>
+      </ion-row>
+      <ion-item class="ion-no-padding">
+        <ion-label>Add</ion-label>
+        <ion-input></ion-input>
+      </ion-item> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> 
+
+    <ion-row class="tpspc">
+      <ion-col size="6" class="ion-no-padding"><ion-button expand="block" color="tertiary" class="next-btn">SUBMIT</ion-button></ion-col>
+      <ion-col size="6" class="ion-no-padding"><ion-button expand="block" color="tertiary" class="next-btn">NEXT</ion-button></ion-col> 
+    </ion-row>
+
+</ion-content> 

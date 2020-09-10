@@ -10,6 +10,7 @@ a{color: #2A2AC0;}
 
 .continuebtn{border-radius: 4px; color: #fff; margin-top: 1em;  background-color:#2A2AC0; line-height: 44px; text-align: center; width: 90%;font-size: 1em;margin:auto;margin-top: 28px;}
 
+.dtcrt{display: inline-block; width: 100%; text-align: center; font-size: 14px; color:#2A2AC0;}
 .maincont{background-color:#fff; padding:10px 25px;}
 
 .mobinpt{border-radius: 6px; background-color: #fff;
