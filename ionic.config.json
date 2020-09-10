@@ -1,5 +1,7 @@
 {
   "name": "HMIS_app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
