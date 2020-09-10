@@ -3,10 +3,11 @@ ion-label{font-size: 1em;}
 
 .nobrdrrads{--border-radius:0px; color: #fff;}
 .tpspc{margin-top: 30px;}
+.tpspcs{margin-top: 6px;}
 
 .item-nativepd{--padding-start:0px!important;}
 
-.maincont{background-color:#fff; padding:10px 25px;}
+.maincont{background-color:#fff; padding:10px 20px;}
 
  .item-inner{border: 0px!important;}
 
@@ -21,7 +22,7 @@ ion-label{font-size: 1em;}
   --knob-size: 15px;
   --knob-border-radius: 50%;
   --bar-border-radius: 20px;
-  padding-top:5px;
+  padding-top:15px;
 margin-top:0px;
 margin-bottom:30px;
   // --knob-box-shadow: 0px 0px 0px 3px #fff;
@@ -48,9 +49,11 @@ ion-input{
 
 .native-input.sc-ion-input-ios{--padding: 5px!important; text-align: center;}
 
-.ordv{text-align:center; font-size: 13px; color: #6C63FF; padding-top:15px;}
+.ordv{text-align:center; font-size: 12px; color: #6C63FF; padding-top:19px;}
 .small-text{font-size: 13px; color: #666;}
 
 .padtp10{padding-top:10px;}
+.padlft10{padding-left: 10px;}
 
 .extrainfo{background-color: #666; color: #fff; padding: 5px; border-radius: 6px; margin-bottom: 15px;}
+.bold{font-weight: 600;}
