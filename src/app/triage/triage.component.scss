@@ -1,0 +1,56 @@
+.uhidbtn{position: absolute; right: 0px; bottom: 5px; --border-radius: 0px;}
+ion-label{font-size: 1em;}
+
+.nobrdrrads{--border-radius:0px; color: #fff;}
+.tpspc{margin-top: 30px;}
+
+.item-nativepd{--padding-start:0px!important;}
+
+.maincont{background-color:#fff; padding:10px 25px;}
+
+ .item-inner{border: 0px!important;}
+
+ .divider{background-color: #F1F1F1; height: 3px; margin:20px -25px 10px -10px;}
+
+ .next-btn{margin:20px 25px 20px 25px;}
+
+ ion-range{--knob-background:#3171e0;
+  --bar-background-active: #3171e0;
+  --bar-background: #999;
+  --bar-height: 3px;
+  --knob-size: 15px;
+  --knob-border-radius: 50%;
+  --bar-border-radius: 20px;
+  padding-top:5px;
+margin-top:0px;
+margin-bottom:30px;
+  // --knob-box-shadow: 0px 0px 0px 3px #fff;
+}
+
+.pointno{background-color: #666; color: #fff; min-width:30px; height:30px; text-align:center; line-height: 30px; border-radius: 30px; margin-right:10px; font-size: 13px;}
+
+ion-item {
+  --padding-end: 0px;
+  --inner-padding-end: 0px; 
+ 
+}
+
+.bpnm{display: block; width: 100%; left: 15px; top:50px; z-index: 999;  position: absolute; font-size: 12px; color: #6C63FF;}
+.midbx{border:solid 1px #ccc; border-radius: 4px;}
+.pos{position: relative;}
+ion-input{
+  --padding-end:5px;
+  --padding-top:5px;
+  --padding-bottom:5px;
+   margin-right:5px;
+   text-align: center;
+}
+
+.native-input.sc-ion-input-ios{--padding: 5px!important; text-align: center;}
+
+.ordv{text-align:center; font-size: 13px; color: #6C63FF; padding-top:15px;}
+.small-text{font-size: 13px; color: #666;}
+
+.padtp10{padding-top:10px;}
+
+.extrainfo{background-color: #666; color: #fff; padding: 5px; border-radius: 6px; margin-bottom: 15px;}
