@@ -11,11 +11,13 @@
 
  <ion-item class="bg-transparent ion-no-padding mobinpt" lines="none">
    
-  <ion-input placeholder="Mobile No"></ion-input>
+  <ion-input placeholder="Mobile No" type="number" name="mobileNo" [(ngModel)]="mobileNo" (ionInput)="mobileNoMethod()"></ion-input>
+  <p style="color:red;font-size:13px;margin-top:5px;margin-bottom:5px;" *ngIf="!mobileNOError">Mobile no is not valid*</p>
+  <p style="color:red;font-size:13px;margin-top:5px;margin-bottom:5px;" *ngIf="inValidMobileNo">Enter Mobile No*</p>
 </ion-item> 
  
 
-<ion-button expand="block" color="tertiary" class="next-btn" (click)="navigate()">Continue</ion-button>
+<ion-button expand="block" color="tertiary" class="next-btn"  (click)="navigate()">Continue</ion-button>
 
 
 
