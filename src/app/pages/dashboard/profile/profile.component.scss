@@ -1,0 +1,50 @@
+.uhidbtn{position: absolute; right: 0px; bottom: 5px; --border-radius: 0px;}
+ion-label{font-size: 1em;}
+
+.nobrdrrads{--border-radius:0px; color: #fff;}
+.tpspc{margin-top: 30px;}
+
+.item-nativepd{--padding-start:0px!important;}
+
+.maincont{background-color:#fff; padding:10px 25px 10px 5px;}
+
+ .item-inner{border: 0px!important;}
+
+ .divider{background-color: #F1F1F1; height: 3px; margin:20px -25px 10px -10px;}
+
+ .next-btn{margin:20px 25px 20px 25px;}
+
+
+//  side navbar
+
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px; 
+  }
+
+  .item-inner {
+    flex-direction:row !important;
+  }
+  ion-icon {
+    color: #999 !important;
+    margin: 1px 2px 1px 0px !important;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 4px 2px 1px 0px;
+  }
+
+  .navx{position: absolute; right: 5px; top: 10px;}
+  .item-inner {
+    flex-direction: row-reverse !important;
+  }
+  ion-icon {
+    color: #666 !important;
+    margin: 1px 2px 1px 0px !important;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 2px 2px 1px 0px;
+  }
+
+  .leftnavcnr{padding-top: 20px;}
+  .leftnavcnr img{ margin-right: 10px;}
+  .leftlogout{position: absolute; bottom: 50px;}

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
 import { TriageComponent } from './triage/triage.component';
+import { ProfileComponent } from './pages/dashboard/profile/profile.component';
+
 
 const routes: Routes = [
   {

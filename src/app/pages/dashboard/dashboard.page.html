@@ -26,7 +26,7 @@
   </ion-header>
   <ion-content>
     <ion-list class="leftnavcnr">
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
+      <ion-item class=" " (click)="navigateProfile()" lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
@@ -42,15 +42,6 @@
     <ion-item class="leftlogout" lines="none"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
   </ion-content>
 </ion-menu>
-
-<!-- <ion-router-outlet id="main"></ion-router-outlet> -->
-<!-- <ion-header>
-  <ion-toolbar>
-    <button class="button icon ion-navicon" (click)="openSidenavBar()"></button>
-    <ion-title class="title">Dashboard</ion-title>
-    <button class="button button-clear"><img src="../../assets/alert-ico.svg"></button>
-  </ion-toolbar>
-</ion-header> -->
 
 <ion-header> 
   <ion-toolbar color="" class="bgwhite header"> 

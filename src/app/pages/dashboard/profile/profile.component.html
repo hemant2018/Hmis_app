@@ -1,0 +1,491 @@
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary"  class="ion-padding">
+
+      <ion-row>
+        <ion-col size="5">
+         <ion-item class="bg-transparent ion-no-padding" lines="none">
+          <ion-thumbnail slot="start">
+            <ion-img> </ion-img>
+          </ion-thumbnail>
+           </ion-item>
+        </ion-col>
+        <ion-col size="7">
+          Subrat Roy<br>
+          Bhubaneswar
+        </ion-col>
+        
+      </ion-row>
+
+
+
+
+      
+      <span class="navx" (click)="closeSidenavBar()">X</span>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list class="leftnavcnr">
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-forum-ico.svg"> Forum</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-stat-ico.svg"> Statistics</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-acc-ico.svg"> Account Settings</ion-item>
+      <ion-item class=" " lines="none"><img src="../../../assets/images/left-help-ico.svg"> Help</ion-item>
+
+      
+    </ion-list>
+
+    <ion-item class="leftlogout" lines="none"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
+  </ion-content>
+</ion-menu>
+<ion-header> 
+  <ion-toolbar color="" class="bgwhite header"> 
+    <ion-buttons slot="start" (click)="openSidenavBar()">
+      <img src="../../assets/images/nav-ico.svg">
+      </ion-buttons>
+  <ion-title align="center">
+  My Profile
+  </ion-title> 
+  <ion-buttons slot="end">
+    <img src="../../assets/images/alert-ico.svg">
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header> 
+  <ion-content color="light" id="main">
+
+    <div class="maincont">
+   
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input type="text" name="name" [(ngModel)]="name"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">UHID</ion-label>
+        <ion-input type="text" name="uhid" [(ngModel)]="uhid" readonly></ion-input>
+        <span style="color:red;padding-left:10px;" *ngIf="uhidValidation">Enter Name*</span>
+        <ion-button color="primary" class="uhidbtn" (click)="createUhid()">Create Temp UHID</ion-button>
+      </ion-item>  
+      
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">MM/DD/YYYY</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"  [(ngModel)]="dob"></ion-datetime>
+      </ion-item>
+
+      <ion-list>
+        <ion-radio-group  [(ngModel)]="gender"> 
+        <ion-item *ngFor="let item of genderList">
+          <ion-label>{{item}}</ion-label>
+          <ion-radio [value]="item"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      </ion-list>
+   
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Mobile Number</ion-label>
+        <ion-input type="number" name="mobileNO" [(ngModel)]="mobileNO"></ion-input>
+      </ion-item> 
+      
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Secondary Number</ion-label>
+        <ion-input type="number" name="secondaryNo" [(ngModel)]="secondaryNo"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Email Address</ion-label>
+        <ion-input type="email" name="emailId" [(ngModel)]="emailId"></ion-input>
+      </ion-item> 
+
+
+<div class="divider"></div>
+
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Address with locality</ion-label>
+        <ion-input type="text" name="address" [(ngModel)]="address"></ion-input>
+      </ion-item> 
+
+      <ion-list>
+
+        <ion-item class="tpspc">
+          <ion-label>Country</ion-label>
+          <ion-select value="brown" okText="Okay" (ionChange)="countryChange($event.target.value)" cancelText="Dismiss" [(ngModel)]="countryCode">
+            <ion-select-option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+
+        <ion-item class="tpspc">
+          <ion-label>State</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="state">
+            <ion-select-option *ngFor="let state of stateList" [value]="state.name"> {{ state.name }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="tpspc">
+          <ion-label>District</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="district">
+            <ion-select-option value="District 1">District 1</ion-select-option>
+            <ion-select-option value="District 2">District 2</ion-select-option>
+             
+          </ion-select>
+        </ion-item>
+
+        <!-- <ion-item class="tpspc">
+          <ion-label>Pin Code</ion-label>
+          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="india">India</ion-select-option>
+            <ion-select-option value="usa">USA</ion-select-option>
+             
+          </ion-select>
+        </ion-item> -->
+        <ion-item class="bg-transparent">
+          <ion-label position="floating">Pin Code</ion-label>
+          <ion-input type="number" name="pinCode" [(ngModel)]="pinCode"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <div class="divider"></div>
+      
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Father's Name</ion-label>
+        <ion-input type="text" name="fatherName" [(ngModel)]="fatherName"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Mother's Name</ion-label>
+        <ion-input type="text" name="motherName" [(ngModel)]="motherName"></ion-input>
+      </ion-item> 
+
+      <ion-item class="tpspc">
+        <ion-label>Marital Status</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="maritalStatus">
+          <ion-select-option value="india">Married</ion-select-option>
+          <ion-select-option value="usa">Single</ion-select-option>
+          <ion-select-option value="usa">Divorcee</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Spouse Name</ion-label>
+        <ion-input type="text" name="spouseName" [(ngModel)]="spouseName"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Spouse UHID</ion-label>
+        <ion-button color="primary" class="uhidbtn">Validate</ion-button>
+        <ion-input type="text" name="spouseUhid" [(ngModel)]="spouseUhid"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent">
+        <ion-label position="floating">Next of Kin Name</ion-label>
+        <ion-input type="text" name="nextKinName" [(ngModel)]="nextKinName"></ion-input>
+      </ion-item> 
+
+<ion-item class="tpspc">
+        <ion-label>Choose Relationship</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="relationship">
+          <ion-select-option value="Father">Father</ion-select-option>
+          <ion-select-option value="Mother">Mother</ion-select-option>
+          <ion-select-option value="Daughter">Daughter</ion-select-option>
+            <ion-select-option value="Son">Son</ion-select-option>
+            <ion-select-option value="Sister">Sister</ion-select-option>
+            <ion-select-option value="Brother">Brother</ion-select-option>
+            <ion-select-option value="Aunt">Aunt</ion-select-option>
+            <ion-select-option value="Uncle">Uncle</ion-select-option>
+            <ion-select-option value="Niece">Niece</ion-select-option>
+            <ion-select-option value="Nephew">Nephew</ion-select-option>
+            <ion-select-option value="Cousin(female)">Cousin(female)</ion-select-option>
+            <ion-select-option value="Cousin(male)">Cousin(male)</ion-select-option>
+            <ion-select-option value="GrandMother">GrandMother</ion-select-option>
+            <ion-select-option value="GrandFather">GrandFather</ion-select-option>
+            <ion-select-option value="Granddaughter">Granddaughter</ion-select-option>
+            <ion-select-option value="Grandson">Grandson</ion-select-option>
+            <ion-select-option value="StepSister">StepSister</ion-select-option>
+            <ion-select-option value="Stepbrother">Stepbrother</ion-select-option>
+            <ion-select-option value="Stepmother">Stepmother</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent">
+        <ion-item lines="none" class="uhidbtn">
+          <ion-label>Same</ion-label>
+          <ion-toggle [(ngModel)]="addressSame" (ngModelChange)="sameAddressMethod()"></ion-toggle>
+        </ion-item>
+        <ion-label position="floating">Kin Address</ion-label>
+        <ion-input type="text" name="kinAddress" [(ngModel)]="kinAddress" [readonly]="addressSame"></ion-input>
+      </ion-item> 
+     
+      <div class="divider"></div>
+
+      <ion-item lines="none" class="tpspc">
+        <ion-label>Medico legal:</ion-label>
+        <ion-toggle [(ngModel)]="medicoLegal"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="none" class="tpspc">
+        <ion-label>Referral:</ion-label>
+        <ion-toggle [(ngModel)]="referralActivate"></ion-toggle>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="referralActivate">
+        <ion-label position="floating">Hospital Name</ion-label>
+        <ion-input type="text" name="hospitalName" [(ngModel)]="hospitalName"></ion-input>
+      </ion-item> 
+
+      <!-- <ion-item class="tpspc">
+        <ion-label>Hospital registry ID</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="india">Father</ion-select-option>
+          <ion-select-option value="usa">Mother</ion-select-option>
+           
+        </ion-select>
+      </ion-item> -->
+      <ion-item class="bg-transparent" *ngIf="referralActivate">
+        <ion-label position="floating">Hospital registry ID</ion-label>
+        <ion-input type="text" name="hospitalRegistryId" [(ngModel)]="hospitalRegistryId"></ion-input>
+      </ion-item> 
+
+      <ion-item class="tpspc" *ngIf="referralActivate">
+        <ion-label>Treatment</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="treatment">
+          <ion-select-option value="Treatment2">Treatment 1</ion-select-option>
+          <ion-select-option value="Treatment2">Treatment 2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+
+
+      <div class="divider"></div>
+
+
+      <ion-item lines="none" class="tpspc">
+        <ion-label>Paying:</ion-label>
+        <ion-toggle [(ngModel)]="payingActivate"></ion-toggle>
+      </ion-item>
+
+      <ion-item class="tpspc" *ngIf="payingActivate">
+        <ion-label>Patient Type</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="patientType">
+          <ion-select-option value="Patient type 1">Patient type 1</ion-select-option>
+          <ion-select-option value="Patient type 2">Patient type 2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="tpspc" *ngIf="payingActivate">
+        <ion-label>Beneficiary Type 1</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="beneficiaryType1">
+          <ion-select-option value="Beneficiary type 1 section 1">Beneficiary type 1 section 1</ion-select-option>
+          <ion-select-option value="Beneficiary type 1 section 2">Beneficiary type 1 section 2</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="none" *ngIf="payingActivate && (beneficiaryType1 != undefined)">
+      <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+      <input type="file" name="myfile" id="upload-file" (change)="beneficaryType1Doc($event)"/>
+      </ion-item>
+
+      <ion-item class="tpspc" *ngIf="payingActivate">
+        <ion-label>Beneficiary Type 2</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="beneficiaryType2">
+          <ion-select-option value="Beneficiary type 2 section 1">Beneficiary type 2 section 1</ion-select-option>
+          <ion-select-option value="Beneficiary type 2 section 2">Beneficiary type 2 section 2</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item lines="none" *ngIf="payingActivate && (beneficiaryType2 != undefined)">
+        <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+        <input type="file" name="myfile" id="upload-file" (change)="beneficaryType2Doc($event)"/>
+        </ion-item>
+      <ion-item class="tpspc" *ngIf="payingActivate">
+        <ion-label>Beneficiary Type 3</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="beneficiaryType3">
+          <ion-select-option value="Beneficiary type 3 section 1">Beneficiary type 3 section 1</ion-select-option>
+          <ion-select-option value="Beneficiary type 3 section 1">Beneficiary type 3 section 2</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+      <ion-item lines="none" *ngIf="payingActivate && (beneficiaryType3 != undefined)">
+        <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+        <input type="file" name="myfile" id="upload-file" (change)="beneficaryType3Doc($event)"/>
+        </ion-item>
+
+        <div class="divider"></div>   
+
+
+      <ion-item lines="none" class="tpspc">
+        <ion-label>Government ID:</ion-label>
+        <ion-toggle [(ngModel)]="govIdActivate"></ion-toggle>
+      </ion-item>
+
+
+      <!-- gov type 1 -->
+      <ion-item class="tpspc" *ngIf="govIdActivate">
+        <ion-label>Govt Id Type 1</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="govId1">
+          <ion-select-option value="Aadhaar No">Aadhaar No</ion-select-option>
+          <ion-select-option value="Driving License No">Driving License No</ion-select-option>
+          <ion-select-option value="PAN No">PAN No</ion-select-option>
+          <ion-select-option value="State Govt ID No">State Govt ID No</ion-select-option>
+           
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId1 === 'Driving License No')">
+        <ion-label position="floating">Driving License No</ion-label>
+        <ion-input name="drivingLicenseNo" type="text" [(ngModel)]="drivingLicenseNo"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId1 === 'PAN No')">
+        <ion-label position="floating">Pan No</ion-label>
+        <ion-input name="panNo" type="text" [(ngModel)]="panNo"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId1 === 'State Govt ID No')">
+        <ion-label position="floating">State Govt ID No</ion-label>
+        <ion-input name="stateGovId" type="text" [(ngModel)]="stateGovId"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId1 === 'Aadhaar No')">
+        <ion-label position="floating">Aadhaar No</ion-label>
+        <ion-input name="aadharNo" type="number" [(ngModel)]="aadharNO"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId1 === 'Aadhaar No')">
+        <ion-label position="floating">Enter Phone No linked to aadhaar</ion-label>
+        <ion-button color="primary" class="uhidbtn">Validate</ion-button>
+        <ion-input name="aadharPhoneno" [(ngModel)]="aadharPhoneno"></ion-input>
+      </ion-item>
+
+
+      <ion-item lines="none" *ngIf="govIdActivate && (govId1 != undefined)">
+        <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+        <input type="file" name="myfile" id="upload-file" (change)="govId1Doc($event)"/>
+        </ion-item>
+
+
+        <!-- gov type 2 -->
+      <ion-item class="tpspc" *ngIf="govIdActivate">
+        <ion-label>Govt Id Type 2</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="govId2">
+          <ion-select-option value="Aadhaar No">Aadhaar No</ion-select-option>
+          <ion-select-option value="Driving License No">Driving License No</ion-select-option>
+          <ion-select-option value="PAN No">PAN No</ion-select-option>
+          <ion-select-option value="State Govt ID No">State Govt ID No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId2 === 'Driving License No')">
+        <ion-label position="floating">Driving License No</ion-label>
+        <ion-input name="drivingLicenseNo" type="text" [(ngModel)]="drivingLicenseNo"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId2 === 'PAN No')">
+        <ion-label position="floating">Pan No</ion-label>
+        <ion-input name="panNo" type="text" [(ngModel)]="panNo"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId2 === 'State Govt ID No')">
+        <ion-label position="floating">State Govt ID No</ion-label>
+        <ion-input name="stateGovId" type="text" [(ngModel)]="stateGovId"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId2 === 'Aadhaar No')">
+        <ion-label position="floating">Aadhaar No</ion-label>
+        <ion-input name="aadharNo" type="number" [(ngModel)]="aadharNO"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId2 === 'Aadhaar No')">
+        <ion-label position="floating">Enter Phone No linked to aadhaar</ion-label>
+        <ion-button color="primary" class="uhidbtn">Validate</ion-button>
+        <ion-input name="aadharPhoneno" [(ngModel)]="aadharPhoneno"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" *ngIf="govIdActivate && (govId2 != undefined)">
+        <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+        <input type="file" name="myfile" id="upload-file" (change)="govId2Doc($event)"/>
+        </ion-item>
+
+        <!-- gov type 3 -->
+      <ion-item class="tpspc" *ngIf="govIdActivate">
+        <ion-label>Govt Id Type 3</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="govId3">
+          <ion-select-option value="Aadhaar No">Aadhaar No</ion-select-option>
+          <ion-select-option value="Driving License No">Driving License No</ion-select-option>
+          <ion-select-option value="PAN No">PAN No</ion-select-option>
+          <ion-select-option value="State Govt ID No">State Govt ID No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId3 === 'Driving License No')">
+        <ion-label position="floating">Driving License No</ion-label>
+        <ion-input name="drivingLicenseNo" type="text" [(ngModel)]="drivingLicenseNo"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId3 === 'PAN No')">
+        <ion-label position="floating">Pan No</ion-label>
+        <ion-input name="panNo" type="text" [(ngModel)]="panNo"></ion-input>
+      </ion-item>
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId3 === 'State Govt ID No')">
+        <ion-label position="floating">State Govt ID No</ion-label>
+        <ion-input name="stateGovId" type="text" [(ngModel)]="stateGovId"></ion-input>
+      </ion-item> 
+
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId3 === 'Aadhaar No')">
+        <ion-label position="floating">Aadhaar No</ion-label>
+        <ion-input name="aadharNo" type="number" [(ngModel)]="aadharNO"></ion-input>
+      </ion-item> 
+      <ion-item class="bg-transparent" *ngIf="govIdActivate && (govId3 === 'Aadhaar No')">
+        <ion-label position="floating">Enter Phone No linked to aadhaar</ion-label>
+        <ion-button color="primary" class="uhidbtn">Validate</ion-button>
+        <ion-input name="aadharPhoneno" [(ngModel)]="aadharPhoneno"></ion-input>
+      </ion-item>
+      <ion-item lines="none" *ngIf="govIdActivate && (govId3 != undefined)">
+        <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Proof</ion-button> -->
+        <input type="file" name="myfile" id="upload-file" (change)="govId3Doc($event)"/>
+        </ion-item>
+
+        <div class="divider"></div>
+
+
+
+        <!-- upload photograph -->
+
+        <ion-item lines="none" class="tpspc">
+          <ion-label>Photograph:</ion-label>
+          <ion-toggle [(ngModel)]="photoActivate"></ion-toggle>
+        </ion-item>
+
+        <ion-row *ngIf="photoActivate">
+          <ion-col size="7">
+           <ion-item lines="none">
+            <ion-thumbnail id="preview" slot="start">
+              <ion-img id="userImage"> </ion-img>
+            </ion-thumbnail>
+             </ion-item>
+          </ion-col>
+          <ion-col size="5">
+            <ion-item lines="none">
+              <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Photo</ion-button> -->
+              <input type="file" name="myfile" id="browse" (change)="uploadPhoto($event)"/>
+            </ion-item>
+          </ion-col>
+          
+        </ion-row>
+
+       
+         
+        
+     
+
+    </div> 
+
+    <ion-button expand="block" color="tertiary" class="next-btn">NEXT</ion-button>
+
+</ion-content> 

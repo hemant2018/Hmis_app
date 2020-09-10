@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController, private route:Router) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,10 @@ export class DashboardPage implements OnInit {
 
   openSidenavBar(){
     this.menu.open();
+  }
+
+  navigateProfile(){
+    this.route.navigate(['/sign-in/dashboard/profile'])
   }
 
 }
