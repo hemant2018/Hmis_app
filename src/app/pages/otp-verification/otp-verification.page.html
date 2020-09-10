@@ -10,14 +10,15 @@
    </div>
 
    <ion-item class="bg-transparent ion-no-padding mobinpt" lines="none">
-    <ion-input placeholder="OTP"></ion-input>
+    <ion-input placeholder="OTP" type="number" [(ngModel)]="optNo" #opt (ionInput)="optNoValid(opt.value)"></ion-input>
+    <p style="color:red;font-size:13px;margin-top:5px;margin-bottom:5px;" *ngIf="optNoError">Enter Otp No*</p>
+    <p style="color:red;font-size:13px;margin-top:5px;margin-bottom:5px;" *ngIf="inValidOptNo">Invalid Opt*</p>
   </ion-item> 
 
  
 
   <ion-button expand="block" color="tertiary" class="next-btn" (click)="navigate()">Continue</ion-button>
 
- <!-- <div class="continuebtn" (click)="navigate()">Continue</div> -->
 <div class="navlft">Resend code</div>
 <div class="navrgt" (click)="changeMobileNo()">Change Number</div>
 

@@ -10,18 +10,20 @@ export class MobileNoPage implements OnInit {
   mobileNo:any;
   mobileNOError:boolean = true;
   inValidMobileNo:boolean = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+   }
 
   ngOnInit() {
+    console.log('chauhan')
+    this.mobileNo = ''
+    this.mobileNOError = true;
+    this.inValidMobileNo = false;
   }
 
-  mobileNoMethod(){
-    if(this.mobileNo != undefined){
-   if(this.mobileNo.toString().length >0){
+  mobileNoMethod(value){
+    if(value != undefined || value.toString().length > 0){
         this.inValidMobileNo = false;
-    } else{
-      this.inValidMobileNo = true;
-    }
+        this.mobileNOError = true;
   }else{
     this.inValidMobileNo= false;
   }
@@ -30,15 +32,12 @@ export class MobileNoPage implements OnInit {
   navigate(){
     if(this.mobileNo != undefined){
       this.inValidMobileNo = false;
-      console.log(this.mobileNo);
         if(this.mobileNo.toString().length > 10){
           this.mobileNOError = false
-          console.log('greater than 10')
         }else if(this.mobileNo.toString().length === 10){
           this.mobileNOError = true
           this.router.navigate(['/sign-in/otpVerify'])
         }else{
-          console.log('less than 10');
           this.mobileNOError = false;
         }
     }else{

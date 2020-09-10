@@ -1,40 +1,27 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { TriageComponent } from './triage/triage.component';
 import { ProfileComponent } from './pages/dashboard/profile/profile.component';
 
-
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'profile',
-    // redirectTo: 'home',
-    // pathMatch: 'full',
-    component:ProfileComponent
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'triage',
-    // redirectTo: 'home',
-    // pathMatch: 'full'
     component:TriageComponent
   },
   {
     path: 'sign-in',
     loadChildren: () => import('./pages/sign-in.module').then( m => m.SignInPageModule)
   },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes,{ useHash: true })
   ],
   exports: [RouterModule]
 })

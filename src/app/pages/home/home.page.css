@@ -1,5 +1,5 @@
 .slideBg{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
-.intro{background-image: url(../../assets/white-arc-left.svg); background-repeat: no-repeat; background-position: left 80%; display: block; height: 100vh; }
+.intro{background-image: url(../../../assets/white-arc-left.svg); background-repeat: no-repeat; background-position: left 80%; display: block; height: 100vh; }
 .logocnr{text-align: center; padding-top:3em;}
 .logocnrr{width: 85px; height: 85px; background-color: #6C63FF; border-radius: 85px;padding:16px; display: inline-block;}
 .logocnrr img{width: 100%; height: auto;}
