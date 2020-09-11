@@ -1,6 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { TriageComponent } from './triage/triage.component';
+import { ComplaintsComponent } from './complaints/complaints.component';
 import { ProfileComponent } from './pages/dashboard/profile/profile.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'triage',
     component:TriageComponent
+  },
+  {
+    path: 'complaints',
+    component:ComplaintsComponent
   },
   {
     path: 'sign-in',

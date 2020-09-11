@@ -55,7 +55,7 @@
   </ion-buttons>
   </ion-toolbar>
   </ion-header> 
-  <ion-content color="light" id="main">
+  <ion-content id="main">
 
     <div class="maincont">
    
@@ -490,15 +490,15 @@
         </ion-item>
 
         <ion-row *ngIf="photoActivate">
-          <ion-col size="6">
-           <ion-item lines="none">
+          <ion-col size="6" class="ion-no-padding">
+           <ion-item lines="none" class="ion-no-padding">
             <ion-thumbnail id="preview" slot="start">
               <ion-img id="userImage"> </ion-img>
             </ion-thumbnail>
              </ion-item>
           </ion-col>
-          <ion-col size="6">
-            <ion-item lines="none">
+          <ion-col size="6"  class="ion-no-padding">
+            <ion-item lines="none"  class="ion-no-padding">
               <!-- <ion-button size="small" color="medium" class="nobrdrrads">Upload Photo</ion-button> -->
               <div class="upload-btn-wrapper">
                 <button class="btn00">Upload Photo</button>
