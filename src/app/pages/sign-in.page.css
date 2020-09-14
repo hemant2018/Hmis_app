@@ -14,3 +14,5 @@ a{color: #2A2AC0;}
 .signbtn{border-radius: 4px; color: #fff; background-color:#6C63FF; line-height: 44px; text-align: center; width: 90%;font-size: 1em;margin:auto;}
 .fbsignbtn{border-radius: 4px; color: #fff; background-color:#3A559F; line-height: 44px; text-align: center; width: 90%;font-size: 1em;margin:auto;}
 .ordv{display: block; text-align: center; padding: 15px 0; width: 100%; font-size: 1em;  color: #1c1c1c;}
+
+.fbsignbtn img{vertical-align: middle; margin-right:6px;}
