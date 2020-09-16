@@ -1,29 +1,23 @@
 <ion-menu side="start" menuId="first" contentId="main">
   <ion-header>
-    <ion-toolbar color="primary"  class="ion-padding">
-
+    <ion-toolbar color="primary"  class="profilepad">
       <ion-row>
-        <ion-col size="5">
+        <ion-col size="3" class="ion-no-padding">
          <ion-item class="bg-transparent ion-no-padding" lines="none">
-          <ion-thumbnail slot="start">
-            <ion-img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"></ion-img>
+          <ion-thumbnail slot="start" class="prof-img">
+            <ion-img src="../../../assets/images/avatar.jpg"></ion-img>
           </ion-thumbnail>
            </ion-item>
         </ion-col>
-        <ion-col size="7">
+        <ion-col size="9">
           Subrat Roy<br>
           Bhubaneswar
         </ion-col>
-        
       </ion-row>
-
-
-
-
-      
       <span class="navx" (click)="closeSidenavBar()">X</span>
     </ion-toolbar>
   </ion-header>
+  
   <ion-content>
     <ion-list class="leftnavcnr">
       <ion-item class=" " [routerLink]="['/sign-in/dashboard/profile']" lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
