@@ -201,3 +201,6 @@ ion-icon {
     height: 135px;
     overflow-y: scroll;
 }
+
+.active{background-color: #6C63FF; color: #fff; cursor: pointer;}
+.slnoa:hover, .slnoa.active, .slnob.active{background-color: #6C63FF; color: #fff; cursor: pointer;}

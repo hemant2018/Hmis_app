@@ -115,29 +115,29 @@
       <ion-col size="12" class="ion-no-padding">How severe do you rate the pain?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <span class="slnoa">1</span>
-      <span class="slnoa">2</span>
-      <span class="slnoa">3</span>
-      <span class="slnoa">4</span>
-      <span class="slnoa">5</span>
-      <span class="slnoa">6</span>
-      <span class="slnoa">7</span>
-      <span class="slnoa">8</span>
-      <span class="slnoa">9</span>
-      <span class="slnoa">10</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 0)">1</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 1)">2</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 2)">3</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 3)">4</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 4)">5</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 5)">6</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 6)">7</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 7)">8 </span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 8)">9</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 9)">10</span>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Select the ones that best describes the pain</ion-col>
 
       <ion-col size="12" class="ion-no-padding">
-        <span class="slnob">BLUNT</span>
-        <span class="slnob">SHARP</span>
-        <span class="slnob">PIERCING</span>
-        <span class="slnob">ACUTE</span>
-        <span class="slnob">CHRONIC</span>
-        <span class="slnob">SUDDEN</span>
-        <span class="slnob">PERSISTENT</span>
+        <span class="slnob pain-{{i}}" (click)="painType(i, 'BLUNT', 0)">BLUNT</span>
+        <span class="slnob pain-{{i}}" (click)="painType(i, 'SHARP', 1)">SHARP</span>
+          <span class="slnob pain-{{i}}" (click)="painType(i, 'PIERCING', 2)">PIERCING</span>
+            <span class="slnob pain-{{i}}" (click)="painType(i, 'ACUTE', 3)">ACUTE</span>
+              <span class="slnob pain-{{i}}" (click)="painType(i, 'CHRONIC', 4)">CHRONIC</span>
+                <span class="slnob pain-{{i}}" (click)="painType(i, 'SUDDEN', 5)">SUDDEN</span>
+                  <span class="slnob pain-{{i}}" (click)="painType(i, 'PERSISTENT', 6)">PERSISTENT</span>
       </ion-col>
     </ion-row>
 
@@ -205,29 +205,29 @@
       <ion-col size="12" class="ion-no-padding">How severe do you rate the pain?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <span class="slnoa">1</span>
-      <span class="slnoa">2</span>
-      <span class="slnoa">3</span>
-      <span class="slnoa">4</span>
-      <span class="slnoa">5</span>
-      <span class="slnoa">6</span>
-      <span class="slnoa">7</span>
-      <span class="slnoa">8</span>
-      <span class="slnoa">9</span>
-      <span class="slnoa">10</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 0)">1</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 1)">2</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 2)">3</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 3)">4</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 4)">5</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 5)">6</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 6)">7</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 7)">8 </span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 8)">9</span>
+      <span class="slnoa painrating-{{i}}" (click)="painRating(i, 9)">10</span>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Select the ones that best describes the pain</ion-col>
 
       <ion-col size="12" class="ion-no-padding">
-        <span class="slnob">BLUNT</span>
-        <span class="slnob">SHARP</span>
-        <span class="slnob">PIERCING</span>
-        <span class="slnob">ACUTE</span>
-        <span class="slnob">CHRONIC</span>
-        <span class="slnob">SUDDEN</span>
-        <span class="slnob">PERSISTENT</span>
+        <span class="slnob pain-{{i}}" (click)="painType(i, 'BLUNT', 0)">BLUNT</span>
+        <span class="slnob pain-{{i}}" (click)="painType(i, 'SHARP', 1)">SHARP</span>
+          <span class="slnob pain-{{i}}" (click)="painType(i, 'PIERCING', 2)">PIERCING</span>
+            <span class="slnob pain-{{i}}" (click)="painType(i, 'ACUTE', 3)">ACUTE</span>
+              <span class="slnob pain-{{i}}" (click)="painType(i, 'CHRONIC', 4)">CHRONIC</span>
+                <span class="slnob pain-{{i}}" (click)="painType(i, 'SUDDEN', 5)">SUDDEN</span>
+                  <span class="slnob pain-{{i}}" (click)="painType(i, 'PERSISTENT', 6)">PERSISTENT</span>
       </ion-col>
     </ion-row>
 
