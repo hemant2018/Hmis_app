@@ -84,6 +84,10 @@ export class ProfileComponent implements OnInit {
     this.route.navigate(['/sign-in/dashboard/profile'])
   }
 
+  logout(){
+    this.route.navigate(['/sign-in'])
+  }
+
 
   createUhid(){
     this.uhidValidation = false

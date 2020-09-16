@@ -6,7 +6,7 @@
         <ion-col size="5">
          <ion-item class="bg-transparent ion-no-padding" lines="none">
           <ion-thumbnail slot="start">
-            <ion-img> </ion-img>
+            <ion-img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"></ion-img>
           </ion-thumbnail>
            </ion-item>
         </ion-col>
@@ -27,10 +27,10 @@
   <ion-content>
     <ion-list class="leftnavcnr">
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
+      <ion-item class=" " [routerLink]="['/sign-in/dashboard/triage']" lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
+      <ion-item class=" " [routerLink]="['/sign-in/dashboard/complaints']" lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
+      <ion-item class=" " [routerLink]="['/sign-in/dashboard/medicalRecords']" lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-forum-ico.svg"> Forum</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-stat-ico.svg"> Statistics</ion-item>
       <ion-item class=" " lines="none"><img src="../../../assets/images/left-acc-ico.svg"> Account Settings</ion-item>
@@ -39,11 +39,11 @@
       
     </ion-list>
 
-    <ion-item class="leftlogout" lines="none"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
+    <ion-item class="leftlogout" lines="none" (click)="logout()"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
   </ion-content>
 </ion-menu>
 <ion-header> 
-  <ion-toolbar color="" class="bgwhite header"> 
+  <ion-toolbar  class="bgwhite header"> 
     <ion-buttons slot="start" (click)="openSidenavBar()">
       <img src="../../assets/images/nav-ico.svg">
       </ion-buttons>

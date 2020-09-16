@@ -3,18 +3,15 @@ import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.page.html',
-  styleUrls: ['./dashboard.page.css'],
+  selector: 'app-complaints',
+  templateUrl: './complaints.component.html',
+  styleUrls: ['./complaints.component.scss'],
 })
-export class DashboardPage implements OnInit {
+export class ComplaintsComponent implements OnInit {
 
   constructor(private menu: MenuController, private route:Router) { }
 
-  ngOnInit() {
-  }
-
-
+  ngOnInit() {}
   closeSidenavBar(){
     this.menu.close();
   }
@@ -26,9 +23,4 @@ export class DashboardPage implements OnInit {
   logout(){
     this.route.navigate(['/sign-in'])
   }
-
-  navigateProfile(){
-    this.route.navigate(['/sign-in/dashboard/profile'])
-  }
-
 }
