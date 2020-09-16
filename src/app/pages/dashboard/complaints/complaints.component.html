@@ -59,14 +59,23 @@
   <div class="maincont">
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">
-        <ion-searchbar class="bg-transparent searchbox" placeholder="Enter complaints / symptoms">
+        <ion-searchbar  class="bg-transparent searchbox" (ionInput)="filterSymptoms($event.target.value)" placeholder="Enter complaints / symptoms" (keyup.enter)="symptomsDefinition($event.target.value)">
         </ion-searchbar>
+        <div class="dropdownBox" *ngIf="symptomsList.length > 0">
+        <option class="optionValues" *ngFor="let option of symptomsList" [value]="option.symptoms" (click)="symptomsDefinition(option.symptoms)">
+          {{option.symptoms}}
+        </option>
+      </div>
       </ion-col>
     </ion-row>
 
+<!-- form loop start -->
+    <div *ngFor="let item of complaintForms; index as i;">
+    <!-- pain form start -->
+    <div  *ngIf="item.type === 'pain'">
     <ion-row class="tpspc">
       <ion-col size="2" class="ion-no-padding">
-        <ion-item lines="none" class="ion-no-padding"><span class="pointno">1</span></ion-item>
+        <ion-item lines="none" class="ion-no-padding" (click)="removeComplaintFrom(i)"><span class="pointno">{{i+1}}</span></ion-item>
       </ion-col>
 
       <ion-col size="10" class="ion-no-padding">
@@ -78,28 +87,28 @@
       <ion-col size="12" class="ion-no-padding">How was its onset?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field1"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Which part is affected?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field2"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Are there any factors that precipitate it?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field3"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">If yes, how long ago have you had the similar experience?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field4"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
@@ -133,14 +142,14 @@
     </ion-row>
 
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx" placeholder="Describe in your own words"></ion-input>
+      <ion-input class="midbx" placeholder="Describe in your own words" [(ngModel)]="item.pain_describe"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Is there any recent history of trauma?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.history"></ion-input>
     </ion-item>
 
     <ion-row class="ion-no-padding tpspc">
@@ -149,14 +158,14 @@
       </ion-col>
     </ion-row>
 
+  </div>
+<!-- pain form ends -->
 
-
-
-
-
+<!-- polyuria form start -->
+    <div  *ngIf="item.type === 'polyuria'">
     <ion-row class="tpspc">
       <ion-col size="2" class="ion-no-padding">
-        <ion-item lines="none" class="ion-no-padding"><span class="pointno">2</span></ion-item>
+        <ion-item lines="none" class="ion-no-padding" (click)="removeComplaintFrom(i)"><span class="pointno">{{i+1}}</span></ion-item>
       </ion-col>
 
       <ion-col size="10" class="ion-no-padding">
@@ -168,28 +177,28 @@
       <ion-col size="12" class="ion-no-padding">How was its onset?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field1"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">WHow many times do you relieve yourself?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field2"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">Are there any factors that precipitate it?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field3"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">If yes, how long ago have you had the similar experience?</ion-col>
     </ion-row>
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx"></ion-input>
+      <ion-input class="midbx" [(ngModel)]="item.field4"></ion-input>
     </ion-item>
 
     <ion-row class="tpspc">
@@ -223,7 +232,7 @@
     </ion-row>
 
     <ion-item lines="none" class="ion-no-padding">
-      <ion-input class="midbx" placeholder="Describe in your own words"></ion-input>
+      <ion-input class="midbx" placeholder="Describe in your own words" [(ngModel)]="item.pain_describe"></ion-input>
     </ion-item>
 
     
@@ -233,6 +242,10 @@
         <ion-button expand="block" color="tertiary" class="next-btn">SUBMIT</ion-button>
       </ion-col>
     </ion-row>
-
+    </div>
+<!-- polyuria form ends -->
   </div>
+<!-- forms loop ends -->
+  
+</div>
 </ion-content>

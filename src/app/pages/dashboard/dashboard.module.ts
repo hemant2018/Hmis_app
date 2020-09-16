@@ -8,6 +8,9 @@ import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
 import { ProfileComponent } from './profile/profile.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { ComplaintsComponent } from './complaints/complaints.component';
+import { TriageComponent } from './triage/triage.component';
 
 @NgModule({
   imports: [
@@ -16,6 +19,6 @@ import { ProfileComponent } from './profile/profile.component';
     IonicModule,
     DashboardPageRoutingModule
   ],
-  declarations: [DashboardPage, ProfileComponent]
+  declarations: [DashboardPage, ProfileComponent, ComplaintsComponent, TriageComponent]
 })
 export class DashboardPageModule {}
