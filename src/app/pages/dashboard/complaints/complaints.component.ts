@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./complaints.component.scss'],
 })
 export class ComplaintsComponent implements OnInit {
+  dropdownActive:boolean = false;
   // symptom dropdown list values
   symptomValue = [
     {
@@ -79,6 +80,7 @@ painBtnType =[
 ]
 complaintForms = [];
 symptomsList = [];
+searchValue:any;
   constructor(private menu: MenuController, private route:Router) { }
 
   ngOnInit() {
@@ -88,6 +90,10 @@ symptomsList = [];
     }
   }
 
+  dropdownMethod(value){
+    console.log(value)
+    this.dropdownActive = value
+  }
 
   filterSymptoms(value){
       console.log(value)
@@ -117,7 +123,7 @@ symptomsList = [];
   }
 
   symptomsDefinition(value){
-      console.log(value);
+    this.searchValue = value
     var type = '';
     var match = false
     if(value === 'pain' || value === 'Back Pain'){
