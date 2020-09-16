@@ -60,7 +60,7 @@
          
         <ion-col size="3" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" name="height" [(ngModel)]="height" (ionInput)="heightMethod($event.target.value)"></ion-input>
             <ion-label>cm</ion-label>
           </ion-item> 
         </ion-col>
@@ -68,7 +68,7 @@
         <ion-col size="1"  class="ion-no-padding"><div class="ordv">OR</div></ion-col>
         <ion-col size="4" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="heightfeet"></ion-input>
             <ion-label>feet</ion-label>
           </ion-item> 
         </ion-col>
@@ -77,7 +77,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="50" max="250" color="primary" pin="true" step="1">
+        <ion-range min="50" max="250" color="primary" pin="true" step="0.1" [(ngModel)]="height" #heightSlider (ionChange)="heightMethod(heightSlider.value)">
           <ion-label slot="start">50</ion-label>
           <ion-label slot="end">250</ion-label>
         </ion-range>
@@ -93,7 +93,7 @@
         <ion-col size="3">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="weight"></ion-input>
             <ion-label>kg</ion-label>
           </ion-item> 
 </ion-col>
@@ -103,7 +103,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="10" max="150" color="primary" pin="true" step="1">
+        <ion-range min="10" max="150" color="primary" pin="true" step="1" [(ngModel)]="weight" (ionChange)="BmiMethod()">
           <ion-label slot="start">10</ion-label>
           <ion-label slot="end">150</ion-label>
         </ion-range>
@@ -118,7 +118,7 @@
         <ion-col size="5" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label>BMI</ion-label>
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="bmiValue" [readonly]="true"></ion-input>
             <ion-label class="small-text">kg/m2</ion-label>
           </ion-item> 
 </ion-col>
@@ -126,7 +126,7 @@
         <ion-col size="4" class="ion-no-padding padlft10">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label>BSA </ion-label>
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="bsaValue" [readonly]="true"></ion-input>
             <ion-label class="small-text">m2</ion-label>
           </ion-item> 
         </ion-col>
@@ -142,14 +142,14 @@
         <ion-col size="2">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="tempfahrenhitValue" (input)="tempInputMethod($event.target.value, 'integral')"></ion-input>
              
           </ion-item> 
 </ion-col>
         <ion-col size="1"><ion-item lines="none" class="ion-no-padding ion-text-center"><div class="ion-text-center">.</div></ion-item></ion-col>
         <ion-col size="3">
           <ion-item lines="none" class="ion-no-padding">
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="tempfahrenhitDegree" (ionInput)="tempInputMethod($event.target.value, 'fractional')"></ion-input>
             <ion-label>F</ion-label>
           </ion-item> 
         </ion-col>
@@ -157,7 +157,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="95" max="108" color="primary" pin="true" step="1">
+        <ion-range min="95" max="108" color="primary" pin="true" step="0.1" [(ngModel)]="tempatureValue" #tempSlider (ionChange)="tempatureMethod(tempSlider.value)">
           <ion-label slot="start">95</ion-label>
           <ion-label slot="end">108</ion-label>
         </ion-range>
@@ -172,7 +172,7 @@
         <ion-col size="5">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="respiratoryRateValue"></ion-input>
             <ion-label>bpm</ion-label>
           </ion-item> 
 </ion-col>
@@ -182,7 +182,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="0" max="200" color="primary" pin="true" step="1">
+        <ion-range min="0" max="200" color="primary" pin="true" step="1" [(ngModel)]="respiratoryRateValue">
           <ion-label slot="start">0</ion-label>
           <ion-label slot="end">200</ion-label>
         </ion-range>
@@ -195,7 +195,7 @@
          
         <ion-col size="5">
           <ion-item lines="none" class="ion-no-padding">
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="pulseRateValue"></ion-input>
             <ion-label>bpm</ion-label>
           </ion-item> 
 </ion-col>
@@ -205,7 +205,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="0" max="100" color="primary" pin="true" step="1">
+        <ion-range min="0" max="100" color="primary" pin="true" step="1" [(ngModel)]="pulseRateValue">
           <ion-label slot="start">0</ion-label>
           <ion-label slot="end">100</ion-label>
         </ion-range>
@@ -218,7 +218,7 @@
         <ion-col size="2">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="pulseOxyPercentageValue" (ionInput)="pulseOxyInputMethod($event.target.value, 'integral')"></ion-input>
              
           </ion-item> 
 </ion-col>
@@ -226,7 +226,7 @@
         <ion-col size="3">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="pulseOxyPercentageDegree" (ionInput)="pulseOxyInputMethod($event.target.value, 'fractional')"></ion-input>
             <ion-label>%</ion-label>
           </ion-item> 
         </ion-col>
@@ -236,7 +236,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="80" max="100" color="primary" pin="true" step="1">
+        <ion-range min="80" max="100" color="primary" pin="true" step="0.1" #pulseSlider (ionChange)="pulseOxyMethod(pulseSlider.value)" [(ngModel)]="pulseOxymetryValue">
           <ion-label slot="start">80</ion-label>
           <ion-label slot="end">100</ion-label>
         </ion-range>
@@ -249,7 +249,7 @@
          
         <ion-col size="2">
           <ion-item lines="none" class="ion-no-padding">
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="diastolicValue"></ion-input>
           </ion-item> 
         </ion-col>
 
@@ -257,7 +257,7 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="systolicValue"></ion-input>
             <ion-label>mmHg</ion-label>
           </ion-item> 
         </ion-col>
@@ -268,14 +268,14 @@
       <ion-row>
         <ion-col size="12" class="pos">
       <ion-item lines="none">
-      <ion-range min="40" max="300" color="primary" pin="true" step="1"></ion-range>
+      <ion-range min="40" max="300" color="primary" pin="true" step="1" [(ngModel)]="diastolicValue"></ion-range>
       </ion-item>
       <div class="bpnm">Diastolic</div>
     </ion-col>
      
     <ion-col size="12" class="pos">
       <ion-item lines="none">
-        <ion-range min="40" max="300" color="primary" pin="true" step="1">
+        <ion-range min="40" max="300" color="primary" pin="true" step="1" [(ngModel)]="systolicValue">
           <ion-label slot="start">40</ion-label>
           <ion-label slot="end">300</ion-label>
         </ion-range>
@@ -291,7 +291,7 @@
         <ion-col size="6">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="painValue"></ion-input>
             <ion-label>Scale</ion-label>
           </ion-item> 
 </ion-col>
@@ -301,7 +301,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+        <ion-range min="0" max="10" color="primary" pin="true" step="1" [(ngModel)]="painValue">
           <ion-label slot="start">0</ion-label>
           <ion-label slot="end">10</ion-label>
         </ion-range>
@@ -315,7 +315,7 @@
         <ion-col size="6">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="stressValue"></ion-input>
             <ion-label>Scale</ion-label>
           </ion-item> 
 </ion-col>
@@ -325,7 +325,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+        <ion-range min="0" max="10" color="primary" pin="true" step="1" [(ngModel)]="stressValue">
           <ion-label slot="start">0</ion-label>
           <ion-label slot="end">10</ion-label>
         </ion-range>
@@ -339,7 +339,7 @@
         <ion-col size="6">
           <ion-item lines="none" class="ion-no-padding">
             
-            <ion-input class="midbx"></ion-input>
+            <ion-input class="midbx" [(ngModel)]="exerciseValue"></ion-input>
             <ion-label>Scale</ion-label>
           </ion-item> 
 </ion-col>
@@ -349,7 +349,7 @@
 
       <ion-item lines="none">
         
-        <ion-range min="0" max="10" color="primary" pin="true" step="1">
+        <ion-range min="0" max="10" color="primary" pin="true" step="1" [(ngModel)]="exerciseValue">
           <ion-label slot="start">0</ion-label>
           <ion-label slot="end">10</ion-label>
         </ion-range>
@@ -362,7 +362,7 @@
         <ion-col size="6">
         <ion-item class="tpspc" class="ion-no-padding">   
         <ion-label>Select</ion-label>
-            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="bloodGroup">
               <ion-select-option value="ab+">AB+</ion-select-option>
               <ion-select-option value="a+">A+</ion-select-option>
               <ion-select-option value="b+">B+</ion-select-option>
@@ -383,9 +383,9 @@
         <ion-col size="6">
         <ion-item class="ion-no-padding">   
         <ion-label>Select</ion-label>
-            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-              <ion-select-option value="Positive">Positive</ion-select-option>
-              <ion-select-option value="Negetive">Negetive</ion-select-option>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="rhesusFactorValue">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
                
             </ion-select>
           </ion-item> 
@@ -399,9 +399,11 @@
         <ion-col size="6">
         <ion-item class="ion-no-padding">   
         <ion-label>Select</ion-label>
-            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-              <ion-select-option value="Positive">Positive</ion-select-option>
-              <ion-select-option value="Negetive">Negetive</ion-select-option>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="pitctValue">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
                
                
             </ion-select>
@@ -415,7 +417,7 @@
         <ion-col size="6">
           <ion-item class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY"></ion-datetime>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY" [ngModel]="period"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -427,17 +429,17 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="smokerActivate" (ngModelChange)="!smokerActivate"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
 
-      <ion-item lines="none"  class="ion-no-padding">Daily Average cigarette / bidis</ion-item> 
+      <ion-item lines="none" *ngIf="smokerActivate" class="ion-no-padding">Daily Average cigarette / bidis</ion-item> 
          
         
-          <ion-item class="ion-no-padding">   
+          <ion-item class="ion-no-padding" *ngIf="smokerActivate">   
             <ion-label>Select No of cigarette*</ion-label>
-                <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="cigaretteCount">
                   <ion-select-option value="Positive">5</ion-select-option>
                   <ion-select-option value="Negetive">10</ion-select-option>
                    
@@ -453,17 +455,17 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="alcoholActivate" (ngModelChange)="!alcoholActivate"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
 
-      <ion-item lines="none"  class="ion-no-padding">Select Daily Average Ml*</ion-item> 
+      <ion-item lines="none" *ngIf="alcoholActivate"  class="ion-no-padding">Select Daily Average Ml*</ion-item> 
          
         
-          <ion-item class="ion-no-padding">   
+          <ion-item class="ion-no-padding" *ngIf="alcoholActivate">   
             <ion-label>Daily Average ml</ion-label>
-                <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="alcoholQuantity">
                   <ion-select-option value="Positive">50</ion-select-option>
                   <ion-select-option value="Negetive">100</ion-select-option>
                   <ion-select-option value="Negetive">500</ion-select-option>
@@ -477,7 +479,7 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="referalActivate" (ngModelChange)="!referalActivate"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -487,7 +489,7 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="hivActivate" (ngModelChange)="!hivActivate"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -498,7 +500,7 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="incomeActivate" (ngModelChange)="!incomeActivate"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -509,91 +511,90 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
-          </ion-item>
-         
+            <ion-toggle [(ngModel)]="illnessActivate"></ion-toggle>
+          </ion-item>   
         </ion-col>
       </ion-row>
-
-      <ion-row>
-      <ion-col size="12" class="ion-no-padding">
-      <ion-chip>
-        <ion-label>Fever</ion-label>
-        <ion-icon name="close"></ion-icon>
-      </ion-chip>
-</ion-col>
-</ion-row>
-
-<ion-row>
-<ion-col size="3" class="ion-no-padding small-text">
-  Persistent since:
-</ion-col>
-<ion-col size="3" class="ion-no-padding">
-  <ion-item lines="none" class="ion-no-padding">
-    <ion-input class="midbx" placeholder="Years"></ion-input>
-    
-  </ion-item>
-</ion-col>
-<ion-col size="3" class="ion-no-padding">
-  <ion-item lines="none" class="ion-no-padding">
-    <ion-input class="midbx" placeholder="Months"></ion-input>
-  </ion-item>
-</ion-col>
-<ion-col size="3" class="ion-no-padding">
-  <ion-item lines="none" class="ion-no-padding">
-    <ion-input class="midbx" placeholder="Days"></ion-input>
-  </ion-item>
-</ion-col>
-</ion-row>
-
-<ion-row>
-  <ion-col size="3" class="ion-no-padding small-text padtp10">
-    Upload documents
-  </ion-col>
-  <ion-col size="9" class="ion-no-padding padtp10">
-    <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-  </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="3" class="ion-no-padding small-text padtp10">
-      Medication
-    </ion-col>
-    <ion-col size="9" class="ion-no-padding">
-      <ion-chip>
-        <ion-label>Fever</ion-label>
-        <ion-icon name="close"></ion-icon>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Fever</ion-label>
-        <ion-icon name="close"></ion-icon>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Fever</ion-label>
-        <ion-icon name="close"></ion-icon>
-      </ion-chip>
-    </ion-col>
-    </ion-row>
-
-    <ion-item lines="none" class="ion-no-padding">
       
-      <ion-input class="midbx" placeholder="Add Medication"></ion-input>
-    </ion-item>
+      <div *ngIf="illnessActivate">
+        <div *ngFor="let item of illnessValues; index as i;">
+          <ion-checkbox  #checkbox (ionChange)='illnessCheckbox(checkbox.checked, i)' [(ngModel)]="checkBoxStatus"></ion-checkbox>
+      <ion-row>
+      <ion-col size="12" class="ion-no-padding" >
+      <ion-chip *ngFor="let values of item.type; index as j;">
+        <ion-label>{{values}}</ion-label>
+        <ion-icon name="close" (click)="removeIllness(item.type[j],j,i)"></ion-icon>
+      </ion-chip>
+      </ion-col>
+      </ion-row>
 
-    <ion-row  class="padtp10">
-      <ion-col size="12" class="ion-no-padding extrainfo">
-      Here note/extra info will display
-</ion-col>
-</ion-row>
+        <ion-row>
+        <ion-col size="3" class="ion-no-padding small-text">
+          Persistent since:
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Years" [(ngModel)]="item.persistent.year" (ionInput)="illnessInputs(item.type[0], $event.target.value, 'year')"></ion-input>
+            
+          </ion-item>
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Months" [(ngModel)]="item.persistent.month" (ionInput)="illnessInputs(item.type[0], $event.target.value, 'month')"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Days" [(ngModel)]="item.persistent.days" (ionInput)="illnessInputs(item.type[0], $event.target.value, 'days')"></ion-input>
+          </ion-item>
+        </ion-col>
+        </ion-row>
 
-      <ion-item class="ion-no-padding">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Search & Add"></ion-input>
-      </ion-item> 
-      <ion-item class="ion-no-padding">
-       
-        <ion-input placeholder="Enter any other info"></ion-input>
-      </ion-item>
+        <ion-row>
+          <ion-col size="3" class="ion-no-padding small-text padtp10">
+            Upload documents
+          </ion-col>
+          <ion-col size="9" class="ion-no-padding padtp10">
+            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="illnessUploadDoc(item.type[0], $event)"></ion-input>
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+          </ion-col>
+          </ion-row>
+
+        <ion-row>
+          <ion-col size="3" class="ion-no-padding small-text padtp10">
+            Medication
+          </ion-col>
+          <ion-col size="9" class="ion-no-padding" *ngIf="item.medication.length > 0">
+            <ion-chip *ngFor="let medicine of item.medication; index as i;">
+              <ion-label>{{medicine}}</ion-label>
+              <ion-icon name="close" (click)="removeIllnessMedication(item.type[0], i)"></ion-icon>
+            </ion-chip>
+          </ion-col>
+          </ion-row>
+        
+        <ion-item lines="none" class="ion-no-padding">
+          
+          <ion-input class="midbx" placeholder="Add Medication"  id="addIllnessMedicine{{i}}" (keyup.enter)="addIllnessMedication(item.type[0],$event.target.value,i)"></ion-input>
+        </ion-item>
+
+          <ion-row  class="padtp10" *ngIf="(illnessActivate && (illnessOtherConditionList.length > 0))">
+            <ion-col size="12" class="ion-no-padding extrainfo">
+           {{illnessOtherConditionValue}}
+      </ion-col>
+      </ion-row>
+    </div>
+        <ion-item class="ion-no-padding">
+          <ion-icon name="search-outline" item-left></ion-icon>
+          <ion-input placeholder="Search & Add" id="addIllnessValue" (keyup.enter)="addIllnessMethod($event.target.value)"></ion-input>
+        </ion-item> 
+        <ion-item class="ion-no-padding">
+        
+          <ion-input placeholder="Enter any other info" [(ngModel)]="addIllnessOtherConditionValue"  (keyup.enter)="addIllnessOtherConditionMethod($event.target.value)"></ion-input>
+        </ion-item>
+    
+  </div>
+        <!-- ends of illness -->
 
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Chronic Illness or conditions:</ion-item></ion-col>
@@ -601,104 +602,172 @@
         <ion-col size="4">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="chronicActivate"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
+
+      <div *ngIf="illnessActivate">
+        <div *ngFor="let item of chronicValues; index as i;">
+          <ion-checkbox  #checkbox (ionChange)='chronicIllnessCheckbox(checkbox.checked, i)' [(ngModel)]="checkBoxStatus"></ion-checkbox>
+      <ion-row>
+      <ion-col size="12" class="ion-no-padding" >
+      <ion-chip *ngFor="let values of item.type; index as j;">
+        <ion-label>{{values}}</ion-label>
+        <ion-icon name="close" (click)="removeChronic(item.type[j],j,i)"></ion-icon>
+      </ion-chip>
+      </ion-col>
+      </ion-row>
+
+        <ion-row>
+        <ion-col size="3" class="ion-no-padding small-text">
+          Persistent since:
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Years" [(ngModel)]="item.persistent.year" (ionInput)="chronicInputs(item.type[0], $event.target.value, 'year')"></ion-input>
+            
+          </ion-item>
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Months" [(ngModel)]="item.persistent.month" (ionInput)="chronicInputs(item.type[0], $event.target.value, 'month')"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3" class="ion-no-padding">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-input class="midbx" placeholder="Days" [(ngModel)]="item.persistent.days" (ionInput)="chronicInputs(item.type[0], $event.target.value, 'days')"></ion-input>
+          </ion-item>
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="3" class="ion-no-padding small-text padtp10">
+            Upload documents
+          </ion-col>
+          <ion-col size="9" class="ion-no-padding padtp10">
+            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="chronicUploadDoc(item.type[0], $event)"></ion-input>
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+          </ion-col>
+          </ion-row>
+
+        <ion-row>
+          <ion-col size="3" class="ion-no-padding small-text padtp10">
+            Medication
+          </ion-col>
+          <ion-col size="9" class="ion-no-padding" *ngIf="item.medication.length > 0">
+            <ion-chip *ngFor="let medicine of item.medication; index as i;">
+              <ion-label>{{medicine}}</ion-label>
+              <ion-icon name="close" (click)="removeChronicMedication(item.type[0], i)"></ion-icon>
+            </ion-chip>
+          </ion-col>
+          </ion-row>
+        
+        <ion-item lines="none" class="ion-no-padding">
+          
+          <ion-input class="midbx" placeholder="Add Medication"  id="addChronicMedicine{{i}}" (keyup.enter)="addChronicMedication(item.type[0],$event.target.value,i)"></ion-input>
+        </ion-item>
+
+          <ion-row  class="padtp10" *ngIf="(chronicActivate && (chronicOtherConditionList.length > 0))">
+            <ion-col size="12" class="ion-no-padding extrainfo">
+           {{chronicOtherConditionValue}}
+      </ion-col>
+      </ion-row>
+    </div>
+
       <ion-item class="ion-no-padding">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Search & Add"></ion-input>
+        <ion-input placeholder="Search & Add" id="addChronicValue" (keyup.enter)="addChronicMethod($event.target.value)"></ion-input>
       </ion-item> 
       <ion-item class="ion-no-padding">
         
-        <ion-input placeholder="Enter any other info"></ion-input>
+        <ion-input placeholder="Enter any other info" [(ngModel)]="addChronicOtherConditionValue"  (keyup.enter)="addChronicOtherConditionMethod($event.target.value)"></ion-input>
       </ion-item>
+    </div>
 
+      <!-- operation section start -->
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Operations or surgeries:</ion-item></ion-col>
          
         <ion-col size="4">
           <ion-item lines="none">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="surgeriesActivate"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
 
+      <div *ngIf="surgeriesActivate">
+        <div *ngFor="let item of surgeriesValues; index as i;">
+            <ion-row>
+              <ion-col size="12" class="ion-no-padding">
+              <ion-chip *ngFor="let values of item.type; index as j;">
+                <ion-label>{{values}}</ion-label>
+                <ion-icon name="close" (click)="removeSurgeries(item.type[j],j,i)"></ion-icon>
+              </ion-chip>
+        </ion-col>
+        </ion-row>
+        
+        <ion-row>
+        <ion-col size="3" class="ion-no-padding small-text">
+          Operation date:
+        </ion-col>
+        <ion-col size="9" class="ion-no-padding">
+          <ion-item class="ion-no-padding">
+            <ion-label> </ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY" [(ngModel)]="item.date"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        
+        </ion-row>
+        
+        <ion-row>
+          <ion-col size="3" class="ion-no-padding small-text padtp10">
+            Upload documents
+          </ion-col>
+          <ion-col size="9" class="ion-no-padding padtp10">
+            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/>
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+          </ion-col>
+          </ion-row>
+        
+          <ion-row>
+            <ion-col size="3" class="ion-no-padding small-text padtp10">
+              Medication
+            </ion-col>
+            <ion-col size="9" class="ion-no-padding" *ngIf="item.medication.length > 0">
+              <ion-chip *ngFor="let medicine of item.medication; index as i;">
+                <ion-label>{{medicine}}</ion-label>
+                <ion-icon name="close" (click)="removeSurgeriesMedication(item.type[0],i)"></ion-icon>
+              </ion-chip>
+            </ion-col>
+            </ion-row>
+        
+            <ion-item lines="none" class="ion-no-padding">
+              <ion-input class="midbx" placeholder="Add Medication" id="addSurgeriesMedicine{{i}}" (keyup.enter)="addSurgeriesMedication(item.type[0],$event.target.value, i)"></ion-input>
+            </ion-item>
+        
+            <ion-row  class="padtp10" *ngIf="(surgeriesActivate && (surgeriesOtherConditionList.length > 0))">
+              <ion-col size="12" class="ion-no-padding extrainfo">
+                {{surgeriesOtherConditionValue}}
+        </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col size="12" class="ion-no-padding">
-        <ion-chip>
-          <ion-label>Fever</ion-label>
-          <ion-icon name="close"></ion-icon>
-        </ion-chip>
-  </ion-col>
-  </ion-row>
-  
-  <ion-row>
-  <ion-col size="3" class="ion-no-padding small-text">
-    Operation date:
-  </ion-col>
-  <ion-col size="9" class="ion-no-padding">
-    <ion-item class="ion-no-padding">
-      <ion-label> </ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" placeholder="MM/DD/YYYY"></ion-datetime>
-    </ion-item>
-  </ion-col>
-  
-  </ion-row>
-  
-  <ion-row>
-    <ion-col size="3" class="ion-no-padding small-text padtp10">
-      Upload documents
-    </ion-col>
-    <ion-col size="9" class="ion-no-padding padtp10">
-      <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-    </ion-col>
-    </ion-row>
-  
-    <ion-row>
-      <ion-col size="3" class="ion-no-padding small-text padtp10">
-        Medication
-      </ion-col>
-      <ion-col size="9" class="ion-no-padding">
-        <ion-chip>
-          <ion-label>Fever</ion-label>
-          <ion-icon name="close"></ion-icon>
-        </ion-chip>
-        <ion-chip>
-          <ion-label>Fever</ion-label>
-          <ion-icon name="close"></ion-icon>
-        </ion-chip>
-        <ion-chip>
-          <ion-label>Fever</ion-label>
-          <ion-icon name="close"></ion-icon>
-        </ion-chip>
-      </ion-col>
-      </ion-row>
-  
-      <ion-item lines="none" class="ion-no-padding">
-        <ion-input class="midbx" placeholder="Add Medication"></ion-input>
-      </ion-item>
-  
-      <ion-row  class="padtp10">
-        <ion-col size="12" class="ion-no-padding extrainfo">
-        Here note/extra info will display
-  </ion-col>
-  </ion-row>
-
-
+      </div>
 
       <ion-item class="ion-no-padding">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Search & Add"></ion-input>
+        <ion-input placeholder="Search & Add" id="addSurgeriesValue" (keyup.enter)="addSurgeriesMethod($event.target.value)"></ion-input>
       </ion-item> 
       <ion-item class="ion-no-padding">
         
-        <ion-input placeholder="Enter any other info"></ion-input>
+        <ion-input placeholder="Enter any other info" [(ngModel)]="addSurgeriesOtherConditionValue"  (keyup.enter)="addSurgeriesOtherConditionMethod($event.target.value)" ></ion-input>
       </ion-item>
+      </div>
 
       <ion-item lines="none"  class="ion-no-padding tpspc">Vaccinations:</ion-item>
       <ion-row>
@@ -706,7 +775,7 @@
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="bcgValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -724,7 +793,7 @@
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="polioValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -741,7 +810,7 @@
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="dptValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -756,7 +825,7 @@
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="measles">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -771,7 +840,7 @@
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="pneumococcal">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -787,7 +856,7 @@
           
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="yellowFever">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -804,7 +873,7 @@
           
           <ion-item class="ion-no-padding">   
             <ion-label>Select</ion-label>
-                <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+                <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="titanus">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
                   <ion-select-option value="maybe">Maybe</ion-select-option>
@@ -820,81 +889,97 @@
         <ion-input placeholder="Enter any other vaccination"></ion-input>
       </ion-item> 
  
-
+      <!-- current medicatoin start -->
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Current medication:</ion-item></ion-col>
          
         <ion-col size="4">
           <ion-item lines="none">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="currentMedication" (ngModelChange)="!currentMedication"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding">
+      <ion-item class="ion-no-padding" *ngIf="currentMedication">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add"></ion-input>
+        <ion-input placeholder="Add" [(ngModel)]="addMedicine" (keyup.enter)="addCurrentMedication($event.target.value)"></ion-input>
       </ion-item> 
+      <ion-row *ngIf="currentMedication">
+        <div class="col-12" *ngIf="currentMedicationList.length > 0"><div class="multislcthldr">
+          <span *ngFor="let item of currentMedicationList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removeCurrentMedication(i)">X</span></span></div>
+      </div>
+      </ion-row>
+      <!-- current medication ends -->
 
+      <!-- sensitive medication ends -->
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Are you sensitive to any medication?</ion-item></ion-col>
          
         <ion-col size="4">
           <ion-item lines="none">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle  [(ngModel)]="sensitiveMedication" (ngModelChange)="!sensitiveMedication"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding">
+      <ion-item class="ion-no-padding" *ngIf="sensitiveMedication">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add"></ion-input>
+        <ion-input placeholder="Add"  [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveMedication($event.target.value)"></ion-input>
       </ion-item> 
+      <ion-row *ngIf="sensitiveMedication">
+        <div class="col-12" *ngIf="sensitiveMedicationList.length > 0"><div class="multislcthldr">
+          <span *ngFor="let item of sensitiveMedicationList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removesensitiveMedication(i)">X</span></span></div>
+      </div>
+      </ion-row>
+      <!-- sensitive medication ends -->
 
+       <!-- sensitive food start -->
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Are you sensitive to any food?</ion-item></ion-col>
          
         <ion-col size="4">
           <ion-item lines="none">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="sensitiveFood" (ngModelChange)="!sensitiveFood"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding">
+      <ion-item class="ion-no-padding" *ngIf="sensitiveFood">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add"></ion-input>
+        <ion-input placeholder="Add" [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveFood($event.target.value)"></ion-input>
       </ion-item> 
+      <ion-row *ngIf="sensitiveFood">
+        <div class="col-12" *ngIf="sensitiveFoodList.length > 0"><div class="multislcthldr">
+          <span *ngFor="let item of sensitiveFoodList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removesensitiveFood(i)">X</span></span></div>
+      </div>
+      </ion-row>
+      <!-- sensitive food ends -->
 
+      <!-- invasive contraceptive -->
       <ion-row class="tpspc">
         <ion-col size="8" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Do you have any medical implants or invasive contraceptive?</ion-item></ion-col>
          
         <ion-col size="4">
           <ion-item lines="none">
             <ion-label> </ion-label>
-            <ion-toggle></ion-toggle>
+            <ion-toggle [(ngModel)]="invasiveContraceptive" (ngModelChange)="!invasiveContraceptive"></ion-toggle>
           </ion-item>
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding">
+      <ion-item class="ion-no-padding" *ngIf="invasiveContraceptive">
         <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add"></ion-input>
+        <ion-input placeholder="Add" [(ngModel)]="addInvasiveContraceptiveValue" (keyup.enter)="addInvasiveContraceptive($event.target.value)"></ion-input>
       </ion-item> 
-
-
-
-
-
-
-
-
-
-
-
+      <ion-row *ngIf="invasiveContraceptive">
+        <div class="col-12" *ngIf="invasiveContraceptiveList.length > 0"><div class="multislcthldr">
+          <span *ngFor="let item of invasiveContraceptiveList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removeinvasiveContraceptive(i)">X</span></span></div>
+      </div>
+      </ion-row>
+      <!-- invasive ends -->
 
 
     </div> 
