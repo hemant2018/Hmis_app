@@ -56,6 +56,10 @@ symptomsList = [];
   constructor(private menu: MenuController, private route:Router) { }
 
   ngOnInit() {
+
+    if(localStorage.getItem('complaintForm')){
+      this.complaintForms = JSON.parse(localStorage.getItem('complaintForm'))
+    }
   //   this.symptomsList = this.symptomsForm.valueChanges.pipe(
   //     startWith(''),
   //     map(option => option ? this.symptomsfilter(option) : this.symptomValue.slice())
@@ -115,7 +119,16 @@ symptomsList = [];
 
 
 removeComplaintFrom(i){
-  this.complaintForms.splice(i, 1);  
+  this.complaintForms.splice(i, 1);
+  localStorage.setItem('complaintForm', JSON.stringify(this.complaintForms))
+  if(this.complaintForms.length === 0){
+    localStorage.removeItem('complaintForm');
+  }
+}
+
+formSubmit(){
+  localStorage.setItem('complaintForm', JSON.stringify(this.complaintForms))
+  alert('form submitted');
 }
 
 }
