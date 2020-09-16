@@ -37,7 +37,7 @@ ion-item {
 }
 
 .bpnm{display: block; width: 100%; left: 15px; top:50px; z-index: 999;  position: absolute; font-size: 12px; color: #6C63FF;}
-.midbx{border:solid 1px #ccc; border-radius: 4px; text-align: center;}
+.midbx{border:solid 1px #ccc; border-radius: 4px; text-align: center; font-size: 14px;}
 .pos{position: relative;}
 ion-input{
   --padding-end:5px;
@@ -76,3 +76,13 @@ ion-icon {
 
   .profilepad ion-thumbnail{padding: 0!important; margin:0!important;}
 
+.upload-btn-wrapper{position:relative;overflow:hidden;display:inline-block;vertical-align:middle}
+.btn00{border:0; height:30px; color:#fff;font-size:14px;font-weight:500;cursor:pointer;display:inline-block}
+.upload-btn-wrapper input[type=file]{position:absolute;left:0;top:0;opacity:0;width:75px; height: 30px;}
+.txtlft{text-align: left!important; padding-left: 5px!important;}
+.docimg{vertical-align: middle; margin-right: 5px;}
+
+ion-chip ion-icon{font-size: 18px!important; padding:0px 0px 0px 5px!important;}
+
+.multislcthldr{margin-bottom:10px;background:#fff;border-bottom:1px solid #ced4da;border-radius:5px;padding:5px 5px 7px; width: 100%;}
+.mutltslct{background-color:#707070;display:inline-block;padding:1px 5px;color:#fff;font-weight:400;letter-spacing:.05em;font-size:12px;text-transform:uppercase;margin:0 3px}

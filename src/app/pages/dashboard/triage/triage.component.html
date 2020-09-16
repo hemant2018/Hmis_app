@@ -361,7 +361,7 @@
          
         <ion-col size="6">
         <ion-item class="tpspc" class="ion-no-padding">   
-        <ion-label>Select</ion-label>
+        <ion-label> </ion-label>
             <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="bloodGroup">
               <ion-select-option value="ab+">AB+</ion-select-option>
               <ion-select-option value="a+">A+</ion-select-option>
@@ -382,7 +382,7 @@
          
         <ion-col size="6">
         <ion-item class="ion-no-padding">   
-        <ion-label>Select</ion-label>
+        <ion-label> </ion-label>
             <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="rhesusFactorValue">
               <ion-select-option value="1">1</ion-select-option>
               <ion-select-option value="2">2</ion-select-option>
@@ -398,7 +398,7 @@
          
         <ion-col size="6">
         <ion-item class="ion-no-padding">   
-        <ion-label>Select</ion-label>
+        <ion-label> </ion-label>
             <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="pitctValue">
               <ion-select-option value="1">1</ion-select-option>
               <ion-select-option value="2">2</ion-select-option>
@@ -555,9 +555,16 @@
             Upload documents
           </ion-col>
           <ion-col size="9" class="ion-no-padding padtp10">
-            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="illnessUploadDoc(item.type[0], $event)"></ion-input>
-            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+
+            <div class="upload-btn-wrapper">
+              <ion-button class="btn00" color="dark">Upload</ion-button>
+              <input type="file" name="myfile" id="upload-file" (change)="illnessUploadDoc(item.type[0], $event)"/>
+            </div>
+
+
+            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="illnessUploadDoc(item.type[0], $event)"></ion-input> -->
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>
 
@@ -575,7 +582,7 @@
         
         <ion-item lines="none" class="ion-no-padding">
           
-          <ion-input class="midbx" placeholder="Add Medication"  id="addIllnessMedicine{{i}}" (keyup.enter)="addIllnessMedication(item.type[0],$event.target.value,i)"></ion-input>
+          <ion-input class="midbx txtlft" placeholder="Add Medication"  id="addIllnessMedicine{{i}}" (keyup.enter)="addIllnessMedication(item.type[0],$event.target.value,i)"></ion-input>
         </ion-item>
 
           <ion-row  class="padtp10" *ngIf="(illnessActivate && (illnessOtherConditionList.length > 0))">
@@ -647,9 +654,15 @@
             Upload documents
           </ion-col>
           <ion-col size="9" class="ion-no-padding padtp10">
-            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="chronicUploadDoc(item.type[0], $event)"></ion-input>
-            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+
+            <div class="upload-btn-wrapper">
+              <ion-button class="btn00" color="dark">Upload</ion-button>
+              <input type="file" name="myfile" id="upload-file" (change)="chronicUploadDoc(item.type[0], $event)"/>
+            </div>
+
+            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="chronicUploadDoc(item.type[0], $event)"></ion-input> -->
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>
 
@@ -667,7 +680,7 @@
         
         <ion-item lines="none" class="ion-no-padding">
           
-          <ion-input class="midbx" placeholder="Add Medication"  id="addChronicMedicine{{i}}" (keyup.enter)="addChronicMedication(item.type[0],$event.target.value,i)"></ion-input>
+          <ion-input class="midbx txtlft" placeholder="Add Medication"  id="addChronicMedicine{{i}}" (keyup.enter)="addChronicMedication(item.type[0],$event.target.value,i)"></ion-input>
         </ion-item>
 
           <ion-row  class="padtp10" *ngIf="(chronicActivate && (chronicOtherConditionList.length > 0))">
@@ -729,9 +742,15 @@
             Upload documents
           </ion-col>
           <ion-col size="9" class="ion-no-padding padtp10">
-            <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/>
-            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png">
+
+            <div class="upload-btn-wrapper">
+              <ion-button class="btn00" color="dark">Upload</ion-button>
+              <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/>
+            </div>
+            
+            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
+            <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/> -->
+            <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>
         
@@ -748,7 +767,7 @@
             </ion-row>
         
             <ion-item lines="none" class="ion-no-padding">
-              <ion-input class="midbx" placeholder="Add Medication" id="addSurgeriesMedicine{{i}}" (keyup.enter)="addSurgeriesMedication(item.type[0],$event.target.value, i)"></ion-input>
+              <ion-input class="midbx txtlft" placeholder="Add Medication" id="addSurgeriesMedicine{{i}}" (keyup.enter)="addSurgeriesMedication(item.type[0],$event.target.value, i)"></ion-input>
             </ion-item>
         
             <ion-row  class="padtp10" *ngIf="(surgeriesActivate && (surgeriesOtherConditionList.length > 0))">
@@ -774,7 +793,7 @@
         <ion-col size="5" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">BCG</ion-item></ion-col>
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="bcgValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -792,7 +811,7 @@
         </ion-item></ion-col>
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="polioValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -809,7 +828,7 @@
         </ion-item></ion-col>
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="dptValue">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -824,7 +843,7 @@
         <ion-col size="5" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Measles</ion-item></ion-col>
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="measles">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -839,7 +858,7 @@
         <ion-col size="5" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding">Pneumococcal</ion-item></ion-col>
         <ion-col size="7" class="ion-no-padding">
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss" [(ngModel)]="pneumococcal">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -855,7 +874,7 @@
         <ion-col size="7" class="ion-no-padding">
           
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="yellowFever">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -872,7 +891,7 @@
         <ion-col size="7" class="ion-no-padding">
           
           <ion-item class="ion-no-padding">   
-            <ion-label>Select</ion-label>
+            <ion-label> </ion-label>
                 <ion-select value="Select" okText="Okay" cancelText="Dismiss"[(ngModel)]="titanus">
                   <ion-select-option value="yes">Yes</ion-select-option>
                   <ion-select-option value="no">No</ion-select-option>
@@ -901,15 +920,16 @@
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding" *ngIf="currentMedication">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add" [(ngModel)]="addMedicine" (keyup.enter)="addCurrentMedication($event.target.value)"></ion-input>
-      </ion-item> 
       <ion-row *ngIf="currentMedication">
         <div class="col-12" *ngIf="currentMedicationList.length > 0"><div class="multislcthldr">
           <span *ngFor="let item of currentMedicationList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removeCurrentMedication(i)">X</span></span></div>
       </div>
       </ion-row>
+      <ion-item class="ion-no-padding" *ngIf="currentMedication">
+        <ion-icon name="search-outline" item-left></ion-icon>
+        <ion-input placeholder="Add" [(ngModel)]="addMedicine" (keyup.enter)="addCurrentMedication($event.target.value)"></ion-input>
+      </ion-item> 
+      
       <!-- current medication ends -->
 
       <!-- sensitive medication ends -->
@@ -924,15 +944,16 @@
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding" *ngIf="sensitiveMedication">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add"  [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveMedication($event.target.value)"></ion-input>
-      </ion-item> 
       <ion-row *ngIf="sensitiveMedication">
         <div class="col-12" *ngIf="sensitiveMedicationList.length > 0"><div class="multislcthldr">
           <span *ngFor="let item of sensitiveMedicationList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removesensitiveMedication(i)">X</span></span></div>
       </div>
       </ion-row>
+      <ion-item class="ion-no-padding" *ngIf="sensitiveMedication">
+        <ion-icon name="search-outline" item-left></ion-icon>
+        <ion-input placeholder="Add"  [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveMedication($event.target.value)"></ion-input>
+      </ion-item> 
+     
       <!-- sensitive medication ends -->
 
        <!-- sensitive food start -->
@@ -947,15 +968,16 @@
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding" *ngIf="sensitiveFood">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add" [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveFood($event.target.value)"></ion-input>
-      </ion-item> 
       <ion-row *ngIf="sensitiveFood">
         <div class="col-12" *ngIf="sensitiveFoodList.length > 0"><div class="multislcthldr">
           <span *ngFor="let item of sensitiveFoodList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removesensitiveFood(i)">X</span></span></div>
       </div>
       </ion-row>
+      <ion-item class="ion-no-padding" *ngIf="sensitiveFood">
+        <ion-icon name="search-outline" item-left></ion-icon>
+        <ion-input placeholder="Add" [(ngModel)]="addSensitiveFoodValue" (keyup.enter)="addSensitiveFood($event.target.value)"></ion-input>
+      </ion-item> 
+     
       <!-- sensitive food ends -->
 
       <!-- invasive contraceptive -->
@@ -970,15 +992,16 @@
          
         </ion-col>
       </ion-row>
-      <ion-item class="ion-no-padding" *ngIf="invasiveContraceptive">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Add" [(ngModel)]="addInvasiveContraceptiveValue" (keyup.enter)="addInvasiveContraceptive($event.target.value)"></ion-input>
-      </ion-item> 
       <ion-row *ngIf="invasiveContraceptive">
         <div class="col-12" *ngIf="invasiveContraceptiveList.length > 0"><div class="multislcthldr">
           <span *ngFor="let item of invasiveContraceptiveList; index as i;" class="mutltslct">{{item}}<span class="mutltslct pr-0" (click)="removeinvasiveContraceptive(i)">X</span></span></div>
       </div>
       </ion-row>
+      <ion-item class="ion-no-padding" *ngIf="invasiveContraceptive">
+        <ion-icon name="search-outline" item-left></ion-icon>
+        <ion-input placeholder="Add" [(ngModel)]="addInvasiveContraceptiveValue" (keyup.enter)="addInvasiveContraceptive($event.target.value)"></ion-input>
+      </ion-item> 
+      
       <!-- invasive ends -->
 
 
