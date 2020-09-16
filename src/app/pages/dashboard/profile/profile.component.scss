@@ -36,7 +36,7 @@ ion-item {
     padding: 4px 2px 1px 0px;
   }
 
-  .navx{position: absolute; right: 5px; top: 10px;}
+   
   .item-inner {
     flex-direction: row-reverse !important;
   }
@@ -47,10 +47,16 @@ ion-item {
     font-size: 22px;
     padding: 2px 2px 1px 0px;
   }
-
-  .leftnavcnr{padding-top: 20px;}
+  .navx{position: absolute; right: 5px; top: 1px;}
+  .leftnavcnr{padding-top: 20px;padding-right: 10px;}
   .leftnavcnr img{ margin-right: 10px;}
   .leftlogout{position: absolute; bottom: 50px;}
+
+  .profilepad{padding:20px;}
+  .prof-img ion-img{border-radius: 100px;}
+  .prof-img ion-img img{border-radius: 100px;}
+
+  .profilepad ion-thumbnail{padding: 0!important; margin:0!important;}
   
   
   .bpnm{display: block; width: 100%; left: 15px; top:50px; z-index: 999;  position: absolute; font-size: 12px; color: #6C63FF;}
