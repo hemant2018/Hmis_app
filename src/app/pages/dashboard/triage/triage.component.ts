@@ -8,9 +8,9 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./triage.component.scss'],
 })
 export class TriageComponent implements OnInit {
-  height:any = 0;
-  heightCms:any = 0;
-  heightfeet:any = 0;
+  height:any;
+  heightCms:any;
+  heightfeet:any;
   weight:any;
   bmiValue:any;
   bsaValue:any;
@@ -90,7 +90,10 @@ export class TriageComponent implements OnInit {
 
    
 
-  ngOnInit() {   }
+  ngOnInit() {   
+    console.log(this.height);
+    console.log(this.heightCms);
+  }
   closeSidenavBar(){
     this.menu.close();
   }
