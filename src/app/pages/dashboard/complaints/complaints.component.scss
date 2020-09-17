@@ -195,7 +195,7 @@ ion-icon {
   font-weight: 600;
 }
 
-.dropdownBox{
+.dropdownBox, ion-list{
   background: #eee;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
     height: 150px;
@@ -205,8 +205,14 @@ ion-icon {
     position: absolute;
     width: 100%;
     z-index: 999;
-    top: 55px;
+    top: 38px;
 }
+
+ion-item{--background: transparent!important;}
+ 
+
+.dropdownlst{ padding-right: 20px!important;}
+
 
 .active{background-color: #6C63FF; color: #fff; cursor: pointer;}
 .slnoa:hover, .slnoa.active, .slnob.active{background-color: #6C63FF; color: #fff; cursor: pointer;}

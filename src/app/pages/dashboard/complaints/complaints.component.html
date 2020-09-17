@@ -57,7 +57,7 @@
     </ion-searchbar>
 
     <ion-list *ngIf="symptomsList.length > 0 && dropdownActive && searchValue.length > 0">
-      <ion-item *ngFor="let option of symptomsList" (click)="searchDropdownSetValue(option.symptoms)">{{option.symptoms}}</ion-item>
+      <ion-item class="dropdownlst" *ngFor="let option of symptomsList" (click)="searchDropdownSetValue(option.symptoms)">{{option.symptoms}}</ion-item>
   </ion-list>
       </ion-col>
     </ion-row>
