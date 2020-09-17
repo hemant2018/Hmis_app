@@ -85,3 +85,12 @@ ion-item {
 .upload-btn-wrapper{position:relative;overflow:hidden;display:inline-block;vertical-align:middle}
 .btn00{border:0;color:#fff;background-color:#707070;padding:5px 15px;border-radius:4px;font-size:16px;font-weight:500;cursor:pointer;display:inline-block}
 .upload-btn-wrapper input[type=file]{position:absolute;left:0;top:0;opacity:0;width:125px}
+
+// ion-input .has-focus{border-bottom: none;} 
+// ion-item{
+//   --highlight-color-focused: red!important;
+// }
+
+// .uhidbtn.ion-touched{border-bottom: none!important;--highlight-color-focused: red!important;}
+
+.btmmarg1{bottom: -1px!important;}
