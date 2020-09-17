@@ -85,12 +85,19 @@ export class TriageComponent implements OnInit {
   chronicOtherConditionValue:any;
   addChronicOtherConditionValue;
   chronicActivate:boolean = true;
+
+  dropdownActive:boolean = false;
+  illnessList:any = [];
+  addIllnessValue:any = '';
+  illnessDropdownValues:any = [];
+
   
   constructor(private menu: MenuController, private route:Router) { }
 
    
 
-  ngOnInit() {}
+  ngOnInit() {   
+  }
   closeSidenavBar(){
     this.menu.close();
   }
@@ -251,7 +258,7 @@ removesensitiveFood(index){
     }
 
     addIllnessMethod(value){
-      (<HTMLInputElement>document.getElementById('addIllnessValue')).value = ''
+      this.addIllnessValue = value
       if(value != '' && value != undefined && value != null){
           if(this.activeIllness != this.illnessValues.length || this.activeIllness < this.illnessValues.length){
             this.illnessValues[this.activeIllness].type.push(value);
@@ -266,6 +273,7 @@ removesensitiveFood(index){
           }
 
       }
+      this.dropdownMethod(false);
     }
 
 
@@ -543,5 +551,30 @@ addChronicMedication(item,value, i){
   }
 }
 
+    dropdownMethod(value){
+      this.dropdownActive = value
+    }
+
+    filterIllness(value){
+      this.dropdownMethod(true);
+      this.illnessList = []
+     var count = 0
+     this.illnessDropdownValues = ['pain', 'Fever', 'Dengue'];
+      this.illnessDropdownValues.forEach(obj =>{
+        if(obj.includes(value)){
+          this.illnessList.push(obj);
+          count ++;
+        }
+      })
+          if(count === 0){
+            this.illnessList = []
+          }
+  }
+
+  searchDropdownSetValue(value){
+    this.addIllnessValue = value
+    this.dropdownMethod(false);
+    this.addIllnessMethod(value);
+  }
 
 }

@@ -560,10 +560,6 @@
               <ion-button class="btn00" color="dark">Upload</ion-button>
               <input type="file" name="myfile" id="upload-file" (change)="illnessUploadDoc(item.type[0], $event)"/>
             </div>
-
-
-            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="illnessUploadDoc(item.type[0], $event)"></ion-input> -->
             <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>
@@ -591,10 +587,17 @@
       </ion-col>
       </ion-row>
     </div>
-        <ion-item class="ion-no-padding">
-          <ion-icon name="search-outline" item-left></ion-icon>
-          <ion-input placeholder="Search & Add" id="addIllnessValue" (keyup.enter)="addIllnessMethod($event.target.value)"></ion-input>
-        </ion-item> 
+        <ion-row class="tpspc">
+          <ion-col size="12" class="ion-no-padding">
+            <ion-searchbar class="bg-transparent searchbox" [(ngModel)]="addIllnessValue" (ionFocus)="dropdownMethod(true)"  (ionInput)="filterIllness($event.target.value)" placeholder="Enter complaints / symptoms" (keyup.enter)="addIllnessMethod($event.target.value)">
+        </ion-searchbar>
+    
+        <ion-list *ngIf="illnessList.length > 0 && dropdownActive && addIllnessValue.length > 0">
+          <ion-item *ngFor="let option of illnessList" (click)="addIllnessMethod(option)">{{option}}</ion-item>
+      </ion-list>
+          </ion-col>
+        </ion-row>
+
         <ion-item class="ion-no-padding">
         
           <ion-input placeholder="Enter any other info" [(ngModel)]="addIllnessOtherConditionValue"  (keyup.enter)="addIllnessOtherConditionMethod($event.target.value)"></ion-input>
@@ -659,9 +662,6 @@
               <ion-button class="btn00" color="dark">Upload</ion-button>
               <input type="file" name="myfile" id="upload-file" (change)="chronicUploadDoc(item.type[0], $event)"/>
             </div>
-
-            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <ion-input type="file" name="myfile" id="upload-file" (ionChange)="chronicUploadDoc(item.type[0], $event)"></ion-input> -->
             <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>
@@ -747,9 +747,6 @@
               <ion-button class="btn00" color="dark">Upload</ion-button>
               <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/>
             </div>
-            
-            <!-- <ion-button shape="round" color="medium" size="small">Upload</ion-button>
-            <input type="file" name="myfile" id="upload-file" (change)="surgiesUploadDoc(item.type[0], $event)"/> -->
             <img *ngFor="let i of item.upload_Doc;" src="../../../../assets/images/pdfico.png" class="docimg">
           </ion-col>
           </ion-row>

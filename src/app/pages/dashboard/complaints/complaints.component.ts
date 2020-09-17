@@ -80,7 +80,7 @@ painBtnType =[
 ]
 complaintForms = [];
 symptomsList = [];
-searchValue:any;
+searchValue:any = '';
   constructor(private menu: MenuController, private route:Router) { }
 
   ngOnInit() {
@@ -91,12 +91,10 @@ searchValue:any;
   }
 
   dropdownMethod(value){
-    console.log(value)
     this.dropdownActive = value
   }
 
   filterSymptoms(value){
-      console.log(value)
       this.dropdownMethod(true);
       this.symptomsList = []
      var count = 0
