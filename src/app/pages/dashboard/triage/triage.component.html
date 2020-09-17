@@ -589,7 +589,7 @@
     </div>
         <ion-row class="tpspc">
           <ion-col size="12" class="ion-no-padding">
-            <ion-searchbar class="bg-transparent searchbox" [(ngModel)]="addIllnessValue" (ionFocus)="dropdownMethod(true)"  (ionInput)="filterIllness($event.target.value)" placeholder="Enter complaints / symptoms" (keyup.enter)="addIllnessMethod($event.target.value)">
+            <ion-searchbar class="bg-transparent searchbox" [(ngModel)]="addIllnessValue" (ionFocus)="!dropdownActive"  (ionInput)="filterIllness($event.target.value)" placeholder="Search & Add" (keyup.enter)="addIllnessMethod($event.target.value)">
         </ion-searchbar>
     
         <ion-list *ngIf="illnessList.length > 0 && dropdownActive && addIllnessValue.length > 0">
@@ -690,12 +690,18 @@
       </ion-row>
     </div>
 
+      <ion-row class="tpspc">
+        <ion-col size="12" class="ion-no-padding">
+          <ion-searchbar class="bg-transparent searchbox" [(ngModel)]="addChronicValue" (ionFocus)="!dropdownActive"  (ionInput)="filterChronicIllness($event.target.value)" placeholder="Search & Add" (keyup.enter)="addChronicMethod($event.target.value)">
+      </ion-searchbar>
+  
+      <ion-list *ngIf="chronicList.length > 0 && dropdownActive && addChronicValue.length > 0">
+        <ion-item *ngFor="let option of chronicList" (click)="addChronicMethod(option)">{{option}}</ion-item>
+    </ion-list>
+        </ion-col>
+      </ion-row>
+
       <ion-item class="ion-no-padding">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Search & Add" id="addChronicValue" (keyup.enter)="addChronicMethod($event.target.value)"></ion-input>
-      </ion-item> 
-      <ion-item class="ion-no-padding">
-        
         <ion-input placeholder="Enter any other info" [(ngModel)]="addChronicOtherConditionValue"  (keyup.enter)="addChronicOtherConditionMethod($event.target.value)"></ion-input>
       </ion-item>
     </div>
@@ -775,10 +781,17 @@
 
       </div>
 
-      <ion-item class="ion-no-padding">
-        <ion-icon name="search-outline" item-left></ion-icon>
-        <ion-input placeholder="Search & Add" id="addSurgeriesValue" (keyup.enter)="addSurgeriesMethod($event.target.value)"></ion-input>
-      </ion-item> 
+      <ion-row class="tpspc">
+        <ion-col size="12" class="ion-no-padding">
+          <ion-searchbar class="bg-transparent searchbox" [(ngModel)]="addSurgeriesValue" (ionFocus)="!dropdownActive"  (ionInput)="filterSurgery($event.target.value)" placeholder="Search & Add" (keyup.enter)="addSurgeriesMethod($event.target.value)">
+      </ion-searchbar>
+  
+      <ion-list *ngIf="surgeryList.length > 0 && dropdownActive && addSurgeriesValue.length > 0">
+        <ion-item *ngFor="let option of surgeryList" (click)="addSurgeriesMethod(option)">{{option}}</ion-item>
+    </ion-list>
+        </ion-col>
+      </ion-row>
+
       <ion-item class="ion-no-padding">
         
         <ion-input placeholder="Enter any other info" [(ngModel)]="addSurgeriesOtherConditionValue"  (keyup.enter)="addSurgeriesOtherConditionMethod($event.target.value)" ></ion-input>

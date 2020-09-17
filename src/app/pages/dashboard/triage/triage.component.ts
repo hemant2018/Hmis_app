@@ -91,6 +91,16 @@ export class TriageComponent implements OnInit {
   addIllnessValue:any = '';
   illnessDropdownValues:any = [];
 
+  chronicList:any = [];
+  addChronicValue:any = '';
+  chronicDropdownValues:any = [];
+
+  surgeryList:any = [];
+  addSurgeryValue:any = '';
+  surgeryDropdownValues:any = [];
+
+  
+
   
   constructor(private menu: MenuController, private route:Router) { }
 
@@ -258,7 +268,7 @@ removesensitiveFood(index){
     }
 
     addIllnessMethod(value){
-      this.addIllnessValue = value
+      this.addIllnessValue = ''
       if(value != '' && value != undefined && value != null){
           if(this.activeIllness != this.illnessValues.length || this.activeIllness < this.illnessValues.length){
             this.illnessValues[this.activeIllness].type.push(value);
@@ -273,7 +283,7 @@ removesensitiveFood(index){
           }
 
       }
-      this.dropdownMethod(false);
+      this.dropdownActive = false;
     }
 
 
@@ -320,46 +330,47 @@ removeIllness(item, index, i){
 }
 }
 
- //  chronic form method
-addChronicMethod(value){
-  (<HTMLInputElement>document.getElementById('addChronicValue')).value = ''
-  if(value != '' && value != undefined && value != null){
-    if(this.activeChronicIllness != this.chronicValues.length || this.activeChronicIllness < this.chronicValues.length){
-      this.chronicValues[this.activeChronicIllness].type.push(value);
-    }else {
-      var obj = {}
-      obj['type'] = []
-      obj['persistent'] = {}
-      obj['upload_Doc'] = []
-      obj['medication'] = [];
-      obj['type'].push(value)
-      this.chronicValues.push(obj);
-    }
-  }
-}
+        //  chronic form method
+        addChronicMethod(value){
+          this.addChronicValue = ''
+          if(value != '' && value != undefined && value != null){
+            if(this.activeChronicIllness != this.chronicValues.length || this.activeChronicIllness < this.chronicValues.length){
+              this.chronicValues[this.activeChronicIllness].type.push(value);
+            }else {
+              var obj = {}
+              obj['type'] = []
+              obj['persistent'] = {}
+              obj['upload_Doc'] = []
+              obj['medication'] = [];
+              obj['type'].push(value)
+              this.chronicValues.push(obj);
+            }
+          }
+          this.dropdownActive = false;
+        }
 
-chronicInputs(item, value, condition){
-      if(this.chronicValues.length > 0){
-            this.chronicValues.forEach((obj,index) =>{
-                  if(obj.type[0] === item){
-                      this.chronicValues[index]['persistent'][condition] = value;
-                  }
-            })
+      chronicInputs(item, value, condition){
+            if(this.chronicValues.length > 0){
+                  this.chronicValues.forEach((obj,index) =>{
+                        if(obj.type[0] === item){
+                            this.chronicValues[index]['persistent'][condition] = value;
+                        }
+                  })
+            }
       }
-}
 
-addChronicOtherConditionMethod(value){
-  this.addChronicOtherConditionValue = ''
-  if(value != '' && value != undefined && value != null){
-    this.chronicOtherConditionList.push(value);
-  }
+      addChronicOtherConditionMethod(value){
+        this.addChronicOtherConditionValue = ''
+        if(value != '' && value != undefined && value != null){
+          this.chronicOtherConditionList.push(value);
+        }
 
-  if(this.chronicOtherConditionList.length <=1){
-    this.chronicOtherConditionValue = this.chronicOtherConditionList[0];
-  }else if(this.chronicOtherConditionList.length > 1){
-    this.chronicOtherConditionValue = this.chronicOtherConditionValue + ', ' + value
-  }
-}
+        if(this.chronicOtherConditionList.length <=1){
+          this.chronicOtherConditionValue = this.chronicOtherConditionList[0];
+        }else if(this.chronicOtherConditionList.length > 1){
+          this.chronicOtherConditionValue = this.chronicOtherConditionValue + ', ' + value
+        }
+      }
 
 
       chronicUploadDoc(item, event){
@@ -429,44 +440,45 @@ illnessCheckbox(value, index){
   }
 }
 
-addSurgeriesMethod(value){
-  (<HTMLInputElement>document.getElementById('addSurgeriesValue')).value = ''
-  if(value != '' && value != undefined && value != null){
-        if(this.activeSurgery != this.surgeriesValues.length || this.activeSurgery < this.surgeriesValues.length){
-          this.surgeriesValues[this.activeSurgery].type.push(value);
-        } else {
-            var obj = {}
-            obj['type'] = []
-            obj['date'] = '';
-            obj['upload_Doc'] = []
-            obj['medication'] = []
-            obj['type'].push(value);
-            this.surgeriesValues.push(obj);
-        }
-  }
-}
-
-addSurgeriesOtherConditionMethod(value){
-  this.addSurgeriesOtherConditionValue = ''
-  if(value != '' && value != undefined && value != null){
-    this.surgeriesOtherConditionList.push(value);
-  }
-
-  if(this.surgeriesOtherConditionList.length <=1){
-    this.surgeriesOtherConditionValue = this.surgeriesOtherConditionList[0];
-  }else if(this.surgeriesOtherConditionList.length > 1){
-    this.surgeriesOtherConditionValue = this.surgeriesOtherConditionValue + ', ' + value
-  }
-}
-
-removeSurgeries(item, index, i){
-      if(this.surgeriesValues.length > 0){
-        this.surgeriesValues[i].type.splice(index, 1)
-              if(this.surgeriesValues[i].type.length === 0){
-                this.surgeriesValues.splice(i, 1);
+      addSurgeriesMethod(value){
+        this.addSurgeriesValue = ''
+        if(value != '' && value != undefined && value != null){
+              if(this.activeSurgery != this.surgeriesValues.length || this.activeSurgery < this.surgeriesValues.length){
+                this.surgeriesValues[this.activeSurgery].type.push(value);
+              } else {
+                  var obj = {}
+                  obj['type'] = []
+                  obj['date'] = '';
+                  obj['upload_Doc'] = []
+                  obj['medication'] = []
+                  obj['type'].push(value);
+                  this.surgeriesValues.push(obj);
               }
-}
-}
+        }
+        this.dropdownActive = false;
+      }
+
+          addSurgeriesOtherConditionMethod(value){
+            this.addSurgeriesOtherConditionValue = ''
+            if(value != '' && value != undefined && value != null){
+              this.surgeriesOtherConditionList.push(value);
+            }
+
+            if(this.surgeriesOtherConditionList.length <=1){
+              this.surgeriesOtherConditionValue = this.surgeriesOtherConditionList[0];
+            }else if(this.surgeriesOtherConditionList.length > 1){
+              this.surgeriesOtherConditionValue = this.surgeriesOtherConditionValue + ', ' + value
+            }
+          }
+
+          removeSurgeries(item, index, i){
+                if(this.surgeriesValues.length > 0){
+                  this.surgeriesValues[i].type.splice(index, 1)
+                        if(this.surgeriesValues[i].type.length === 0){
+                          this.surgeriesValues.splice(i, 1);
+                        }
+          }
+          }
 
 
 removeSurgeriesMedication(item, index){
@@ -551,12 +563,9 @@ addChronicMedication(item,value, i){
   }
 }
 
-    dropdownMethod(value){
-      this.dropdownActive = value
-    }
 
     filterIllness(value){
-      this.dropdownMethod(true);
+      this.dropdownActive = true;
       this.illnessList = []
      var count = 0
      this.illnessDropdownValues = ['pain', 'Fever', 'Dengue'];
@@ -571,10 +580,39 @@ addChronicMedication(item,value, i){
           }
   }
 
-  searchDropdownSetValue(value){
-    this.addIllnessValue = value
-    this.dropdownMethod(false);
-    this.addIllnessMethod(value);
-  }
+        filterChronicIllness(value){
+          this.dropdownActive = true;
+          this.chronicList = []
+        var count = 0
+        this.chronicDropdownValues = ['pain', 'Fever', 'Dengue'];
+          this.chronicDropdownValues.forEach(obj =>{
+            if(obj.includes(value)){
+              this.chronicList.push(obj);
+              count ++;
+            }
+          })
+              if(count === 0){
+                this.chronicList = []
+              }
+      }
+
+
+      filterSurgery(value){
+        this.dropdownActive = true;
+        this.surgeryList = []
+      var count = 0
+      this.surgeryDropdownValues = ['pain', 'Fever', 'Dengue'];
+        this.surgeryDropdownValues.forEach(obj =>{
+          if(obj.includes(value)){
+            this.surgeryList.push(obj);
+            count ++;
+          }
+        })
+            if(count === 0){
+              this.surgeryList = []
+            }
+    }
+  
+
 
 }
