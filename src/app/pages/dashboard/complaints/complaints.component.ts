@@ -97,6 +97,7 @@ searchValue:any;
 
   filterSymptoms(value){
       console.log(value)
+      this.dropdownMethod(true);
       this.symptomsList = []
      var count = 0
       this.symptomValue.forEach(obj =>{
@@ -122,6 +123,12 @@ searchValue:any;
     this.route.navigate(['/sign-in'])
   }
 
+  searchDropdownSetValue(value){
+    this.searchValue = value
+    this.dropdownMethod(false);
+    this.symptomsDefinition(value);
+  }
+
   symptomsDefinition(value){
     this.searchValue = value
     var type = '';
@@ -137,6 +144,7 @@ searchValue:any;
     const definitionObj = JSON.parse(JSON.stringify(this.complaintsFormsDefinition[type]));
     this.complaintForms.unshift(definitionObj);
   }
+  this.dropdownMethod(false);
    
        //  to maintain the active state of button
        var that = this

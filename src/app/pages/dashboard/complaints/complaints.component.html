@@ -53,13 +53,12 @@
   <div class="maincont">
     <ion-row class="tpspc">
       <ion-col size="12" class="ion-no-padding">
-        <ion-searchbar  class="bg-transparent searchbox" [(ngModel)]="searchValue" (ionFocus)="dropdownMethod(true)" (ionBlur)="dropdownMethod(false)" (ionInput)="filterSymptoms($event.target.value)" placeholder="Enter complaints / symptoms" (keyup.enter)="symptomsDefinition($event.target.value)">
-        </ion-searchbar>
-        <div class="dropdownBox" *ngIf="symptomsList.length > 0 && dropdownActive">
-        <option class="optionValues" *ngFor="let option of symptomsList" [value]="option.symptoms" (click)="symptomsDefinition(option.symptoms)">
-          {{option.symptoms}}
-        </option>
-      </div>
+        <ion-searchbar  class="bg-transparent searchbox" [(ngModel)]="searchValue" (ionFocus)="dropdownMethod(true)"  (ionInput)="filterSymptoms($event.target.value)" placeholder="Enter complaints / symptoms" (keyup.enter)="symptomsDefinition($event.target.value)">
+    </ion-searchbar>
+
+    <ion-list *ngIf="symptomsList.length > 0 && dropdownActive && searchValue.length > 0">
+      <ion-item *ngFor="let option of symptomsList" (click)="searchDropdownSetValue(option.symptoms)">{{option.symptoms}}</ion-item>
+  </ion-list>
       </ion-col>
     </ion-row>
 
