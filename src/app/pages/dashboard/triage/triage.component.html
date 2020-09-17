@@ -58,14 +58,14 @@
         
         <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">1</span>Height:</ion-item></ion-col>
          
-        <ion-col size="3" class="ion-no-padding">
+        <ion-col size="4" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             <ion-input class="midbx" type="number" name="height" for="height" [(ngModel)]="height" (ionInput)="heightMethod($event.target.value)"></ion-input>
-            <ion-label>cm</ion-label>
+            <ion-label>cm / </ion-label>
           </ion-item> 
         </ion-col>
 
-        <ion-col size="1"  class="ion-no-padding"><div class="ordv">OR</div></ion-col>
+         
         <ion-col size="4" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             <ion-input class="midbx" type="number" name="heightfeet" [(ngModel)]="heightfeet"></ion-input>
@@ -90,7 +90,7 @@
         
         <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">2</span>Weight:</ion-item></ion-col>
          
-        <ion-col size="3">
+        <ion-col size="5">
           <ion-item lines="none" class="ion-no-padding">
             
             <ion-input class="midbx" type="number" name="weight" [(ngModel)]="weight"></ion-input>
@@ -110,12 +110,14 @@
       </ion-item>
      
 
-      <div class="bmibg">
+      
       <ion-row>
        
         <ion-col size="2" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">3</span></ion-item></ion-col>
-         
-        <ion-col size="5" class="ion-no-padding">
+      </ion-row>  
+      <div class="bmibg">
+        <ion-row>
+        <ion-col size="6" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label>BMI</ion-label>
             <ion-input class="midbx" [(ngModel)]="bmiValue" type="number" name="bmi" [readonly]="true"></ion-input>
@@ -123,7 +125,7 @@
           </ion-item> 
 </ion-col>
        
-        <ion-col size="4" class="ion-no-padding padlft10">
+        <ion-col size="6" class="ion-no-padding padlft10">
           <ion-item lines="none" class="ion-no-padding">
             <ion-label>BSA </ion-label>
             <ion-input class="midbx" [(ngModel)]="bsaValue" type="number" name="bsa" [readonly]="true"></ion-input>
@@ -137,17 +139,17 @@
 
       <ion-row class="tpspc">
         
-        <ion-col size="6" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">4</span>Temperature:</ion-item></ion-col>
+        <ion-col size="5" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">4</span>Temperature:</ion-item></ion-col>
          
-        <ion-col size="2">
+        <ion-col size="3" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             
             <ion-input class="midbx" [(ngModel)]="tempfahrenhitValue" type="number" name="temp" (input)="tempInputMethod($event.target.value, 'integral')"></ion-input>
              
           </ion-item> 
 </ion-col>
-        <ion-col size="1"><ion-item lines="none" class="ion-no-padding ion-text-center"><div class="ion-text-center">.</div></ion-item></ion-col>
-        <ion-col size="3">
+        <ion-col size="1" class="ion-no-padding ion-text-center"><ion-item lines="none" class="ion-no-padding ion-text-center">.</ion-item></ion-col>
+        <ion-col size="3" class="ion-no-padding">
           <ion-item lines="none" class="ion-no-padding">
             <ion-input class="midbx" [(ngModel)]="tempfahrenhitDegree" type="number" name="temperature" (ionInput)="tempInputMethod($event.target.value, 'fractional')"></ion-input>
             <ion-label>F</ion-label>
@@ -245,9 +247,9 @@
 
       <ion-row>
         
-        <ion-col size="5" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">8</span>Blood Pressure:</ion-item></ion-col>
+        <ion-col size="4" class="ion-no-padding"><ion-item lines="none"  class="ion-no-padding"><span class="pointno">8</span>Blood Pressure:</ion-item></ion-col>
          
-        <ion-col size="2">
+        <ion-col size="3">
           <ion-item lines="none" class="ion-no-padding">
             <ion-input class="midbx" [(ngModel)]="diastolicValue" type="number" name="diastolic"></ion-input>
           </ion-item> 
@@ -587,7 +589,7 @@
       </ion-col>
       </ion-row>
     </div>
-        <ion-row class="tpspc">
+        <ion-row class="tpspc ion-no-padding">
           <ion-col size="12" class="ion-no-padding">
             <ion-searchbar class="bg-transparent ion-no-padding" [(ngModel)]="addIllnessValue" (ionFocus)="!dropdownActive"  (ionInput)="filterIllness($event.target.value)" placeholder="Search & Add" (keyup.enter)="addIllnessMethod($event.target.value)">
         </ion-searchbar>
