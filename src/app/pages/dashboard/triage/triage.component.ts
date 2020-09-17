@@ -90,10 +90,7 @@ export class TriageComponent implements OnInit {
 
    
 
-  ngOnInit() {   
-    console.log(this.height);
-    console.log(this.heightCms);
-  }
+  ngOnInit() {}
   closeSidenavBar(){
     this.menu.close();
   }
