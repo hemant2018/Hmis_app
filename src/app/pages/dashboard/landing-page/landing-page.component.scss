@@ -1,8 +1,4 @@
-/* .my-custom-menu {
-    --width: 500px;
-  } */
-
-  body.platform-android, body.platform-override{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
+body.platform-android, body.platform-override{background-color:#ECF1FA;font-family: 'Roboto', sans-serif;}
 a{color: #2A2AC0;}    
 .mt1{padding-top: 6px;}
 .bar.bar-assertive, .platform-android .bar-header.bar-assertive.bar, .platform-override .bar-header.bar-assertive.bar{background-color: #fff; color: #181461;}
@@ -92,8 +88,3 @@ ion-item {
   .prof-img ion-img img{border-radius: 100px;}
 
   .profilepad ion-thumbnail{padding: 0!important; margin:0!important;}
-
-  .active-item{
-   background-color: #181461;
-  }
- 

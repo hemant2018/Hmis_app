@@ -1,76 +1,41 @@
-<ion-menu side="start" menuId="first" contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary"  class="profilepad">
-      <ion-row>
-        <ion-col size="3" class="ion-no-padding">
-         <ion-item class="bg-transparent ion-no-padding" lines="none">
-          <ion-thumbnail slot="start" class="prof-img">
-            <ion-img src="../../../assets/images/avatar.jpg"></ion-img>
-          </ion-thumbnail>
-           </ion-item>
-        </ion-col>
-        <ion-col size="9">
-          Subrat Roy<br>
-          Bhubaneswar
-        </ion-col>
-      </ion-row>
-      <span class="navx" (click)="closeSidenavBar()">X</span>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <ion-list class="leftnavcnr">
-      <ion-item class=" " [routerLink]="['/sign-in/dashboard/profile']" lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
-      <ion-item class=" " [routerLink]="['/sign-in/dashboard/triage']"   lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
-      <ion-item class=" " [routerLink]="['/sign-in/dashboard/complaints']" lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
-      <ion-item class=" " [routerLink]="['/sign-in/dashboard/medicalRecords']" lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-forum-ico.svg"> Forum</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-stat-ico.svg"> Statistics</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-acc-ico.svg"> Account Settings</ion-item>
-      <ion-item class=" " lines="none"><img src="../../../assets/images/left-help-ico.svg"> Help</ion-item>
+<ion-split-pane contentId="content">
+    <ion-menu contentId="content">
+      <ion-header>
+        <ion-toolbar color="primary"  class="profilepad">
+          <ion-row>
+            <ion-col size="3" class="ion-no-padding">
+             <ion-item class="bg-transparent ion-no-padding" lines="none">
+              <ion-thumbnail slot="start" class="prof-img">
+                <ion-img src="../../../assets/images/avatar.jpg"></ion-img>
+              </ion-thumbnail>
+               </ion-item>
+            </ion-col>
+            <ion-col size="9">
+              Subrat Roy<br>
+              Bhubaneswar
+            </ion-col>
+          </ion-row>
+          <span class="navx" (click)="closeSidenavBar()">X</span>
+        </ion-toolbar>
+      </ion-header>
 
-      
-    </ion-list>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item [class.active-item]="selectedPath ==='/sign-in/dashboard/profile'" [routerLink]="['/sign-in/dashboard/profile']" lines="none"><img src="../../../assets/images/left-profile-ico.svg"> My Profile</ion-item>
+            <ion-item [class.active-item]="selectedPath ==='/sign-in/dashboard/triage'" [routerLink]="['/sign-in/dashboard/triage']"   lines="none"><img src="../../../assets/images/left-triage-ico.svg"> My Triage</ion-item>
+            <ion-item [class.active-item]="selectedPath ==='/sign-in/dashboard/complaints'" [routerLink]="['/sign-in/dashboard/complaints']" lines="none"><img src="../../../assets/images/left-cal-ico.svg"> My Appointments</ion-item>
+            <ion-item  lines="none"><img src="../../../assets/images/left-app-ico.svg"> New Appointments</ion-item>
+            <ion-item  [routerLink]="['/sign-in/dashboard/medicalRecords']" lines="none"><img src="../../../assets/images/left-record-ico.svg"> Medical Records</ion-item>
+            <ion-item  lines="none"><img src="../../../assets/images/left-forum-ico.svg"> Forum</ion-item>
+            <ion-item  lines="none"><img src="../../../assets/images/left-stat-ico.svg"> Statistics</ion-item>
+            <ion-item  lines="none"><img src="../../../assets/images/left-acc-ico.svg"> Account Settings</ion-item>
+            <ion-item  lines="none"><img src="../../../assets/images/left-help-ico.svg"> Help</ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <ion-item class="leftlogout" lines="none" (click)="logout()"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
+      </ion-content>
 
-    <ion-item class="leftlogout" lines="none" (click)="logout()"><img src="../../../assets/images/left-logout-ico.svg"> Logout</ion-item>
-  </ion-content>
-</ion-menu>
-
-<ion-header> 
-  <ion-toolbar color="" class="bgwhite header"> 
-    <ion-buttons slot="start" (click)="openSidenavBar()">
-      <img src="../../assets/images/nav-ico.svg">
-      </ion-buttons>
-  <ion-title align="center">
-  Dashboard
-  </ion-title> 
-  <ion-buttons slot="end">
-    <img src="../../assets/images/alert-ico.svg">
-  </ion-buttons>
-  </ion-toolbar>
-  </ion-header> 
-
-<ion-content overflow-scroll="true" class="has-header padding" id="main">
-       
-  <div class="maincont">
-
-    <ion-item class="bg-transparent ion-no-padding mobinpt" lines="none">
-      
-      <ion-input placeholder="Search"></ion-input>
-      <ion-icon name="search-outline" item-right></ion-icon>
-    </ion-item> 
-
-
-       
-
-
-<div class="dashboardbx"><h2>Appointments</h2><img src="../../assets/dashboard-appointment.svg"> </div>
-<div class="dashboardbx"><h2>Records</h2><img src="../../assets/intro-second-img.svg"> </div>
-<div class="dashboardbx"><h2>Forum</h2><img src="../../assets/intro-third-img.svg"> </div>
-<div class="dashboardbx"><h2>Account Settings</h2><img src="../../assets/dashboard-accounting.svg"> </div>
-      </div>
-  
-  
-  
-</ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>

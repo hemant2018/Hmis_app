@@ -11,6 +11,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComplaintsComponent } from './complaints/complaints.component';
 import { TriageComponent } from './triage/triage.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HeaderComponent } from '../header/header.component';
 
 @NgModule({
   imports: [
@@ -19,6 +21,6 @@ import { TriageComponent } from './triage/triage.component';
     IonicModule,
     DashboardPageRoutingModule
   ],
-  declarations: [DashboardPage, ProfileComponent, ComplaintsComponent, TriageComponent]
+  declarations: [DashboardPage, ProfileComponent, ComplaintsComponent, TriageComponent, LandingPageComponent, HeaderComponent]
 })
 export class DashboardPageModule {}

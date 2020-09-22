@@ -71,24 +71,6 @@ export class ProfileComponent implements OnInit {
     this.countryList = csc.getAllCountries();
   }
 
-
-  closeSidenavBar(){
-    this.menu.close();
-  }
-
-  openSidenavBar(){
-    this.menu.open();
-  }
-
-  navigateProfile(){
-    this.route.navigate(['/sign-in/dashboard/profile'])
-  }
-
-  logout(){
-    this.route.navigate(['/sign-in'])
-  }
-
-
   createUhid(){
     this.uhidValidation = false
    var today = new Date(); 

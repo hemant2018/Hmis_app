@@ -109,18 +109,6 @@ searchValue:any = '';
           }
   }
 
-  closeSidenavBar(){
-    this.menu.close();
-  }
-
-  openSidenavBar(){
-    this.menu.open();
-  }
-
-  logout(){
-    this.route.navigate(['/sign-in'])
-  }
-
   searchDropdownSetValue(value){
     this.searchValue = value
     this.dropdownMethod(false);

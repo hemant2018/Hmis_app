@@ -6,29 +6,40 @@ import { ProfileComponent } from './profile/profile.component';
 import { TriageComponent } from './triage/triage.component';
 import { ComplaintsComponent } from './complaints/complaints.component';
 import { MedicalRecordsComponent } from './medical-records/medical-records.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardPage
-  },
-  {
-    path:'profile',
-    component:ProfileComponent
-  },
-  {
-    path:'triage',
-    component:TriageComponent
-  },
-  {
-    path:'complaints',
-    component:ComplaintsComponent
-  },
-  {
-    path:'medicalRecords',
-    component:MedicalRecordsComponent
+    component: DashboardPage,
+    children:[
+      {
+        path:'home',
+        component:LandingPageComponent,
+        pathMatch:'full'
+      },
+      {
+        path:'profile',
+        component:ProfileComponent,
+        pathMatch:'full'
+      },
+      {
+        path:'triage',
+        component:TriageComponent,
+        pathMatch:'full'
+      },
+      {
+        path:'complaints',
+        component:ComplaintsComponent,
+        pathMatch:'full'
+      },
+      {
+        path:'medicalRecords',
+        component:MedicalRecordsComponent,
+        pathMatch:'full'
+      }
+    ],
   }
-
 ];
 
 @NgModule({

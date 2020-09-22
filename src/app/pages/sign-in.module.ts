@@ -18,7 +18,7 @@ import { DashboardPageModule } from './dashboard/dashboard.module';
     FormsModule,
     IonicModule,
     RouterModule.forChild([
-      { path:'', component: SignInPage, pathMatch:'full'},
+      { path:'', component: SignInPage},
       { path:'mobileSignIn', component: MobileNoPage, pathMatch:'full'},
       { path:'otpVerify', component: OtpVerificationPage, pathMatch:'full'},
       {path:'location', component:LocationPage, pathMatch:'full'},

@@ -108,18 +108,6 @@ export class TriageComponent implements OnInit {
 
   ngOnInit() {   
   }
-  closeSidenavBar(){
-    this.menu.close();
-  }
-
-  openSidenavBar(){
-    this.menu.open();
-  }
-
-  logout(){
-    this.route.navigate(['/sign-in'])
-  }
-
 
   heightMethod(value){
     this.height = value
