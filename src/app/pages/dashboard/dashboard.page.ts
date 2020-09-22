@@ -10,9 +10,9 @@ import { Router, RouterEvent } from '@angular/router';
 export class DashboardPage implements OnInit, AfterViewInit {
   selectedPath = '';
   constructor(private menu: MenuController, private router:Router) {
-      // this.router.events.subscribe((event:RouterEvent)=>{
-      //   this.selectedPath = event.url;
-      // })
+      this.router.events.subscribe((event:RouterEvent)=>{
+        this.selectedPath = event.url;
+      })
      
 
    }
