@@ -14,7 +14,7 @@ export class LocationPage implements OnInit {
   }
 
   navigate(){
-    this.router.navigate(['/sign-in/dashboard'])
+    this.router.navigate(['/sign-in/dashboard/home'])
   }
 
 }

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router, RouterEvent } from '@angular/router';
 
@@ -7,23 +7,17 @@ import { Router, RouterEvent } from '@angular/router';
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.css'],
 })
-export class DashboardPage implements OnInit, AfterViewInit {
+export class DashboardPage implements OnInit {
   selectedPath = '';
   constructor(private menu: MenuController, private router:Router) {
       this.router.events.subscribe((event:RouterEvent)=>{
         this.selectedPath = event.url;
       })
-     
-
+      // initially navigate to landing page of dashboard
+      this.router.navigate(['/sign-in/dashboard/home'])
    }
 
   ngOnInit() {
-    console.log('same navitation')
-    // initially navigate to landing page of dashboard
-    this.router.navigate(['/sign-in/dashboard/home'])
-  }
-
-  ngAfterViewInit(){
   }
 
   closeSidenavBar(){
@@ -32,6 +26,7 @@ export class DashboardPage implements OnInit, AfterViewInit {
 
 
   logout(){
+    this.closeSidenavBar();
     this.router.navigate(['/sign-in'])
   }
 
