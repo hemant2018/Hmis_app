@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
-import csc from 'country-state-city'
+import csc from 'country-state-city';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
